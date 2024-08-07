@@ -4,9 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       
-      <class name="smoke_suite.ALC_4349"/>
-      
-      <class name="smoke_suite.ALC_4348"/>
+      <class name="smoke_suite.ALC_4956"/>
      
      
     </classes>
