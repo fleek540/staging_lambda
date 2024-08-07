@@ -22,20 +22,11 @@ public class ALC_4349 extends BaseClass{
 		pbsignup.chooseCollectorPannel();
 		scroll(500,2100,500,1555);
 		pbsignup.edittexts.get(5).click();
-		String textToCopy = "hkhf";
-
-	    // Create a StringSelection object
-	    StringSelection stringSelection = new StringSelection(textToCopy);
-
-	    // Get the system clipboard
-	    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-
-	    // Set the contents of the clipboard to the StringSelection
-	    clipboard.setContents(stringSelection, null);
-
-	    System.out.println("String has been copied to clipboard: " + textToCopy);
+		pbDriver.pressKey(new KeyEvent(AndroidKey.H));
+		pbDriver.pressKey(new KeyEvent(AndroidKey.K));
+		pbDriver.pressKey(new KeyEvent(AndroidKey.H));
+		pbDriver.pressKey(new KeyEvent(AndroidKey.F));
 		
-		tap(500,1510);
 		pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 		tap(500,1658);
 		pbsignup.pwdcriteria.isDisplayed();
