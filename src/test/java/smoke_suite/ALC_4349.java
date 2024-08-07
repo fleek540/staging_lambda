@@ -20,7 +20,7 @@ public class ALC_4349 extends BaseClass{
 		PB_Register_Member pbsignup= new PB_Register_Member(pbDriver);
 		pbsignup.clickSignUpButton();
 		pbsignup.chooseCollectorPannel();
-		scroll(500,2100,500,1555);
+		scroll(500,2000,500,1500);
 		pbsignup.edittexts.get(5).click();
 		pbDriver.pressKey(new KeyEvent(AndroidKey.H));
 		pbDriver.pressKey(new KeyEvent(AndroidKey.K));
@@ -31,7 +31,7 @@ public class ALC_4349 extends BaseClass{
 		tap(500,1658);
 		pbsignup.pwdcriteria.isDisplayed();
 		Thread.sleep(1000);
-		takescreenshotofandroid("Password criteria is displayed if not met.");
+		
 		
 	}
 
