@@ -1,0 +1,39 @@
+{
+  "id": "ac2c007a-9017-429b-bcbc-f809c4ee37bc",
+  "values": [
+    {
+      "type": "any",
+      "value": "FleekLx68KM",
+      "key": "m1randomUsername"
+    },
+    {
+      "type": "any",
+      "value": "+633168366822",
+      "key": "m1randomNumber"
+    },
+    {
+      "type": "any",
+      "value": "DC2A777C-B9A1-68FF-7000-B630AF861380",
+      "key": "m1deviceID"
+    },
+    {
+      "type": "any",
+      "value": "dcb073ee-5979-4e34-bb19-973d8028291c",
+      "key": "m1id"
+    },
+    {
+      "type": "any",
+      "value": "dcb073ee-5979-4e34-bb19-973d8028291c",
+      "key": "m1entityId"
+    },
+    {
+      "type": "any",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTIxMTExMTUsInN1YiI6ImRjYjA3M2VlLTU5NzktNGUzNC1iYjE5LTk3M2Q4MDI4MjkxYyJ9.LFpU3sxQE_nV9x6LMCUqJSym_4AONccYz3PQAwS4eo5RQMtXDHL1OOwgKwjG8sWgOOSi2jTZULAftvF8zqjb4g",
+      "key": "m1accessToken"
+    }
+  ],
+  "name": "environment",
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2024-07-10T11:31:55.650Z",
+  "_postman_exported_using": "Newman/5.3.2"
+}

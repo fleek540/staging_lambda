@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-06T16:51:19 IST" name="Default suite" finished-at="2024-08-06T16:57:48 IST" duration-ms="388965">
+    <groups>
+    </groups>
+    <test started-at="2024-08-06T16:51:19 IST" name="Default test" finished-at="2024-08-06T16:57:48 IST" duration-ms="388965">
+      <class name="smoke_suite.ALC_3710">
+        <test-method is-config="true" signature="generateAndroidBenefitname()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateAndroidBenefitname" finished-at="2024-08-06T16:51:19 IST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateAndroidBenefitname -->
+        <test-method is-config="true" signature="generateBenefitOrderName()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateBenefitOrderName" finished-at="2024-08-06T16:51:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateBenefitOrderName -->
+        <test-method is-config="true" signature="generateBonusName()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateBonusName" finished-at="2024-08-06T16:51:19 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateBonusName -->
+        <test-method is-config="true" signature="generateBenefitName()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateBenefitName" finished-at="2024-08-06T16:51:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateBenefitName -->
+        <test-method is-config="true" signature="generateBranchMemberName()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateBranchMemberName" finished-at="2024-08-06T16:51:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateBranchMemberName -->
+        <test-method is-config="true" signature="generateBranchName()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateBranchName" finished-at="2024-08-06T16:51:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateBranchName -->
+        <test-method is-config="true" signature="generateBrandName()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateBrandName" finished-at="2024-08-06T16:51:19 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateBrandName -->
+        <test-method is-config="true" signature="generateRandomBranchMemberNumber()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateRandomBranchMemberNumber" finished-at="2024-08-06T16:51:19 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateRandomBranchMemberNumber -->
+        <test-method is-config="true" signature="generateRandomLastName()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateRandomLastName" finished-at="2024-08-06T16:51:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateRandomLastName -->
+        <test-method is-config="true" signature="generateRandomNumber()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="generateRandomNumber" finished-at="2024-08-06T16:51:19 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateRandomNumber -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:19 IST" name="setup" finished-at="2024-08-06T16:51:57 IST" duration-ms="38387" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="preconditions()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:51:57 IST" name="preconditions" description="Ensure that Gojek is turned on in country settings for Indonesia and a valid Indonessian account linked to gojek having tokens in wallet exists." finished-at="2024-08-06T16:52:31 IST" duration-ms="34124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preconditions -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:52:31 IST" name="afterMethod" finished-at="2024-08-06T16:52:31 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=preconditions status=SUCCESS method=ALC_3710.preconditions()[pri:0, instance:smoke_suite.ALC_3710@420a85c4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="gojekTransaction()[pri:1, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:52:32 IST" name="gojekTransaction" description="Login with existing account and perform Gojek Transaction." finished-at="2024-08-06T16:54:37 IST" duration-ms="125944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gojekTransaction -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:54:37 IST" name="afterMethod" finished-at="2024-08-06T16:54:37 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=gojekTransaction status=SUCCESS method=ALC_3710.gojekTransaction()[pri:1, instance:smoke_suite.ALC_3710@420a85c4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="checktokens()[pri:2, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:54:37 IST" name="checktokens" description="Ensure that transaction status in reports is completed and member on both alchemy along with the app has same number of tokens.Ensure that Gojek accounts can be unlinked" finished-at="2024-08-06T16:56:30 IST" duration-ms="112271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checktokens -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:56:30 IST" name="afterMethod" finished-at="2024-08-06T16:56:30 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checktokens status=SUCCESS method=ALC_3710.checktokens()[pri:2, instance:smoke_suite.ALC_3710@420a85c4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="checkforunverifiednum()[pri:3, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:56:30 IST" name="checkforunverifiednum" description="Unverified member should not be able to perform gojek transaction and get error message." finished-at="2024-08-06T16:57:48 IST" duration-ms="77766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkforunverifiednum -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:57:48 IST" name="afterMethod" finished-at="2024-08-06T16:57:48 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkforunverifiednum status=SUCCESS method=ALC_3710.checkforunverifiednum()[pri:3, instance:smoke_suite.ALC_3710@420a85c4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="teardownalchemy()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:57:48 IST" name="teardownalchemy" finished-at="2024-08-06T16:57:48 IST" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownalchemy -->
+        <test-method is-config="true" signature="teardownapp()[pri:0, instance:smoke_suite.ALC_3710@420a85c4]" started-at="2024-08-06T16:57:48 IST" name="teardownapp" finished-at="2024-08-06T16:57:48 IST" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownapp -->
+      </class> <!-- smoke_suite.ALC_3710 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
