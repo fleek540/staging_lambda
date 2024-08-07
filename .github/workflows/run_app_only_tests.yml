@@ -33,7 +33,20 @@ jobs:
 
     - name: Install Maven dependencies
       run: mvn install
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.12.1' # Specify Node.js version
 
+    - name: Install npm version 9.4.2
+      run: |
+        npm install -g npm@9.4.2
+
+    - name: Install Newman version 5.3.2
+      run: |
+        npm install -g newman@5.3.2
+        
     - name: Run tests
       run: |
         mvn test
