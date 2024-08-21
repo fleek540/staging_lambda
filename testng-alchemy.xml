@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="6" name="Test">
+    <classes>
+     <class name="smoke_suite.ALC_4363"/>
+     <class name="smoke_suite.ALC_4356"/>
+     <class name="smoke_suite.ALC_4355"/>
+     <class name="smoke_suite.ALC_4353"/>     
+     <class name="smoke_suite.ALC_4362"/>
+     <class name="smoke_suite.ALC_666"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
