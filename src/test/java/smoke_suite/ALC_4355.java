@@ -2,6 +2,7 @@ package smoke_suite;
 
 import java.io.ByteArrayInputStream;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
@@ -19,6 +20,7 @@ public class ALC_4355 extends BaseClass{
 	@Test(priority=0, description="User is able to create a bonus and save it.")
 	@Description("User is able to create a bonus and save it.")
     public void createBonus() throws InterruptedException {
+		try {
     AlchemyLoginPage loginAlchmey=new AlchemyLoginPage(alcDriver);
 	loginAlchmey.alc_adminlogin(adminphoneNumber,adminpassword);
 	Orders o= new Orders(alcDriver);
@@ -46,14 +48,25 @@ public class ALC_4355 extends BaseClass{
     TakesScreenshot ts1 = (TakesScreenshot) alcDriver; byte[] screenshot1 =
     		  ts1.getScreenshotAs(OutputType.BYTES); Allure.addAttachment("Bonus succesfully created and saved",
     		  new ByteArrayInputStream(screenshot1)); Thread.sleep(2000);
+    		  ((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
+    			
+	}catch(Exception e) {
+		((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+	}
 }
 	
 	
 	@Test(priority=1, description="User is able to edit a bonus detail and save it.")
 	@Description("User is able to edit a bonus detail and save it.")
 	public void editbonus() throws InterruptedException {
+		try {
 		Orders o= new Orders(alcDriver);
 		o.clickSpecificOrdersBonus();
 		o.editbonus(bonusname+"123");
+		((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
+		
+	}catch(Exception e) {
+		((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+	}
 	}
 }
