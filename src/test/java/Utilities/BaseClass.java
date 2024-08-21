@@ -210,7 +210,7 @@ public static boolean gojekyn;
 		  ltOptions.put("idleTimeout","1700");
 		  ltOptions.put("name", testName);
 		  ltOptions.put("isRealMobile", true);
-		  ltOptions.put("app", "lt://APP10160352241719320468047147");
+		  ltOptions.put("app", "lt://APP10160361821724247841523904");
 		  ltOptions.put("deviceOrientation", "PORTRAIT");
 		  
 		  capabilities.setCapability("lt:options", ltOptions);
