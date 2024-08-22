@@ -4,6 +4,8 @@ import Utilities.ScreenshotListener;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import org.openqa.selenium.JavascriptExecutor;
+
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
