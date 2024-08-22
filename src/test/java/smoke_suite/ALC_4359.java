@@ -13,6 +13,8 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import plastic_Bank_Pages.PB_LoginPage;
 import plastic_Bank_Pages.PB_Transaction;
+import org.openqa.selenium.JavascriptExecutor;
+
 
 import java.io.IOException;
 @Listeners({AllureTestNg.class, ScreenshotListener.class})
