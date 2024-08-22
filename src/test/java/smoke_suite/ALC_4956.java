@@ -22,17 +22,30 @@ public class ALC_4956 extends BaseClass{
 	@Test(priority=2, description="Login with newly created member and change password in settings.")
 	@Description("Login with newly created member and chnage password in settings.")
 	public void changepassword() throws InterruptedException {
+		try{
 		PB_LoginPage login= new PB_LoginPage(pbDriver);
 		login.login(Data.member_Number4864.replace("+63", ""), "123456a","+63");
 		PB_Menu_Options mo=  new PB_Menu_Options(pbDriver);
 		mo.changepw();
+			 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}
 	}
 	@Test(priority=2, description="Login with new password")
 	@Description("Login with new password")
 	public void loginWithNewPassword() throws InterruptedException {
+		try{
 		PB_LoginPage login= new PB_LoginPage(pbDriver);
 		login.login(Data.member_Number4864.replace("+63", ""), "123456ab","+63");
 		takescreenshotofandroid("User is able to login with new password");
-		
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}
 	}
 }
