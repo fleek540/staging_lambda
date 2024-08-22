@@ -3,6 +3,8 @@ package smoke_suite;
 import java.io.IOException;
 
 import org.testng.annotations.Test;
+import org.openqa.selenium.JavascriptExecutor;
+
 
 import Utilities.BaseClass;
 import Utilities.Data;
