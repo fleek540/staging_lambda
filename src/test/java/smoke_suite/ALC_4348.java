@@ -21,6 +21,7 @@ public class ALC_4348 extends BaseClass{
 	@Test(priority = 0, description="User not able to sign up if he tries to sign up within 3 minutes of first sign up.")
 	@Description("User not able to sign up if he tries to sign up within 3 minutes of first sign up.")
 	public void verifyUserCanNot() throws InterruptedException {
+		try{
 		PB_Register_Member pbsignup= new PB_Register_Member(pbDriver);
 		pbsignup.signUpCollector();
 		PB_LoginPage pb= new PB_LoginPage(pbDriver);
@@ -67,11 +68,18 @@ public class ALC_4348 extends BaseClass{
 		pbsignup.register.click();
 		
 		takescreenshotofandroid("Registration failed if tried within 3 minutes since previous registration");
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}	
 	}
 	
 	@Test(priority =1, description="User able to sign up again if he tries after 3 minute window.")
 	@Description("User able to sign up again if he tries after 3 minute window.")
 	public void verifyUserCanAfter3Min() throws InterruptedException {
+		try{
 		PB_Register_Member pbsignup= new PB_Register_Member(pbDriver);
 		Thread.sleep(180000);
 		pbsignup.register.click();
@@ -83,7 +91,12 @@ public class ALC_4348 extends BaseClass{
 		PB_LoginPage pb= new PB_LoginPage(pbDriver);
 		Thread.sleep(5000);
 		pb.logoutmem();
-		
+	 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}	
 	}
 
 }
