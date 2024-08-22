@@ -17,6 +17,7 @@ public class ALC_4349 extends BaseClass{
 	@Test(priority=0,description="Password criteria displayed if not met by user.")
 	@Description("Password criteria displayed if not met by user.")
 	public void verifypasswordcriteria() throws InterruptedException {
+		try{
 		PB_Register_Member pbsignup= new PB_Register_Member(pbDriver);
 		pbsignup.clickSignUpButton();
 		pbsignup.chooseCollectorPannel();
@@ -31,7 +32,12 @@ public class ALC_4349 extends BaseClass{
 		tap(500,1658);
 		pbsignup.pwdcriteria.isDisplayed();
 		Thread.sleep(1000);
-		
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}
 		
 	}
 
