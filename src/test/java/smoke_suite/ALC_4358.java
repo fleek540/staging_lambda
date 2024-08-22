@@ -10,6 +10,8 @@ import plastic_Bank_Pages.PB_LoginPage;
 import plastic_Bank_Pages.PB_Register_CollectionPoint;
 import plastic_Bank_Pages.PB_Register_Member;
 import plastic_Bank_Pages.PB_Transaction;
+import org.openqa.selenium.JavascriptExecutor;
+
 
 import java.io.IOException;
 
