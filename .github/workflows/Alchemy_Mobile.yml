@@ -1,0 +1,117 @@
+name: Staging Env Run alchemy and mobile alternating test cases ALC_258, ALC_3710, ALC_1711, ALC_4361, ALC_4366, ALC_4365, ALC_3609, ALC_347, ALC_348, ALC_4359, ALC_4358, ALC_4357, ALC_4995, ALC_4351, ALC_4350, ALC_4354, ALC_4871, ALC_4357, ALC_4995, ALC_4351
+
+on:
+  workflow_dispatch: # This allows the workflow to be triggered manually
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        architecture: 'x64'
+        cache: 'maven'
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.12.1' # Specify Node.js version
+
+    - name: Install npm version 9.4.2
+      run: |
+        npm install -g npm@9.4.2
+
+    - name: Install Newman version 5.3.2
+      run: |
+        npm install -g newman@5.3.2
+   
+    - name: Cache Maven packages
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom-alchemy-mobile.xml') }}
+        restore-keys: ${{ runner.os }}-maven
+
+    - name: Install Maven dependencies
+      run: mvn -f pom-alchemy-mobile.xml install
+
+    - name: Get Latest Automation Build Number
+      id: get_automation_build_number
+      shell: pwsh
+      run: |
+        $response = Invoke-RestMethod -Uri "https://api.lambdatest.com/automation/api/v1/builds?limit=1" -Method Get -Headers @{
+          Authorization = "Basic $([Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('ashish.rawatfleekitsolutions:MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2')))"
+        }
+        $build_id = $response.data[0].build_id
+        Write-Host "Automation Build ID: $build_id"
+        echo "AUTOMATION_BUILD_ID=$build_id" >> $env:GITHUB_ENV
+
+    - name: Get Latest Mobile Build Number
+      id: get_mobile_build_number
+      shell: pwsh
+      run: |
+        $response = Invoke-RestMethod -Uri "https://mobile-api.lambdatest.com/mobile-automation/api/v1/builds?limit=1" -Method Get -Headers @{
+          Authorization = "Basic $([Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('ashish.rawatfleekitsolutions:MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2')))"
+        }
+        $build_id = $response.data[0].build_id
+        Write-Host "Mobile Build ID: $build_id"
+        echo "MOBILE_BUILD_ID=$build_id" >> $env:GITHUB_ENV
+
+    - name: Generate Automation Shareable Link
+      id: generate_automation_shareable_link
+      shell: pwsh
+      run: |
+        $build_id = $env:AUTOMATION_BUILD_ID
+        $requestBody = @{
+          expiresAt = 3
+          themeVersion = "v2"
+          isThemeEnabled = $true
+          entityType = "Automation Build"
+          entityIds = @($build_id)
+        } | ConvertTo-Json -Compress
+        $response = Invoke-RestMethod -Uri "https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link" -Method Post -Headers @{
+          Authorization = "Basic $([Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('ashish.rawatfleekitsolutions:MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2')))"
+          'Content-Type' = 'application/json'
+        } -Body $requestBody
+        $shareUrl = $response.shareIdUrl
+        Write-Host "Automation Shareable Report URL: $shareUrl"
+        echo "AUTOMATION_SHAREABLE_URL=$shareUrl" >> $env:GITHUB_ENV
+
+    - name: Generate Mobile Shareable Link
+      id: generate_mobile_shareable_link
+      shell: pwsh
+      run: |
+        $build_id = $env:MOBILE_BUILD_ID
+        $requestBody = @{
+          entityIds = @($build_id)
+          entityType = "App Automation Build"
+          expiresAt = 7
+        } | ConvertTo-Json -Compress
+        $response = Invoke-RestMethod -Uri "https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link" -Method Post -Headers @{
+          Authorization = "Basic $([Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('ashish.rawatfleekitsolutions:MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2')))"
+          'Content-Type' = 'application/json'
+        } -Body $requestBody
+        $shareUrl = $response.shareIdUrl
+        Write-Host "Mobile Shareable Report URL: $shareUrl"
+        echo "MOBILE_SHAREABLE_URL=$shareUrl" >> $env:GITHUB_ENV
+
+    - name: Send Notification to Slack
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        AUTOMATION_SHAREABLE_URL: ${{ env.AUTOMATION_SHAREABLE_URL }}
+        MOBILE_SHAREABLE_URL: ${{ env.MOBILE_SHAREABLE_URL }}
+      run: |
+        $headers = @{
+          'Content-Type' = 'application/json'
+        }
+        $body = @{
+          text = "Alternating test cases . Web Report URL: <$env:AUTOMATION_SHAREABLE_URL|Automation Report> and Mobile report URL: <$env:MOBILE_SHAREABLE_URL|Mobile Report>"
+        } | ConvertTo-Json
+        Invoke-RestMethod -Uri $env:SLACK_WEBHOOK -Method Post -Headers $headers -Body $body
