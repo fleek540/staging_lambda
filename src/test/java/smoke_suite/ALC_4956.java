@@ -10,6 +10,9 @@ import io.qameta.allure.Description;
 import io.qameta.allure.testng.AllureTestNg;
 import plastic_Bank_Pages.PB_LoginPage;
 import plastic_Bank_Pages.PB_Menu_Options;
+import org.openqa.selenium.JavascriptExecutor;
+
+
 @Listeners({AllureTestNg.class, ScreenshotListener.class})
 
 public class ALC_4956 extends BaseClass{
