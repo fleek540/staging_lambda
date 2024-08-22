@@ -6,6 +6,8 @@ import java.util.Collections;
 import alchemy_Pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.openqa.selenium.JavascriptExecutor;
+
 
 import Utilities.BaseClass;
 import Utilities.Data;
