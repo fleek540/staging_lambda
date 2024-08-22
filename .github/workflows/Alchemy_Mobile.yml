@@ -1,4 +1,4 @@
-name: Staging Env Run alchemy and mobile alternating test cases ALC_258, ALC_3710, ALC_1711, ALC_4361, ALC_4366, ALC_4365, ALC_3609, ALC_347, ALC_348, ALC_4359, ALC_4358, ALC_4357, ALC_4995, ALC_4351, ALC_4350, ALC_4354, ALC_4871, ALC_4357, ALC_4995, ALC_4351
+name: QA Env Run alchemy and mobile alternating test cases ALC_258, ALC_3710, ALC_1711, ALC_4361, ALC_4366, ALC_4365, ALC_3609, ALC_347, ALC_348, ALC_4359, ALC_4358, ALC_4357, ALC_4995, ALC_4351, ALC_4350, ALC_4354, ALC_4871, ALC_4357, ALC_4995, ALC_4351
 
 on:
   workflow_dispatch: # This allows the workflow to be triggered manually
@@ -112,6 +112,6 @@ jobs:
           'Content-Type' = 'application/json'
         }
         $body = @{
-          text = "Alternating test cases . Web Report URL: <$env:AUTOMATION_SHAREABLE_URL|Automation Report> and Mobile report URL: <$env:MOBILE_SHAREABLE_URL|Mobile Report>"
+          text = "QA Env Alternating test cases . Web Report URL: <$env:AUTOMATION_SHAREABLE_URL|Automation Report> and Mobile report URL: <$env:MOBILE_SHAREABLE_URL|Mobile Report>"
         } | ConvertTo-Json
         Invoke-RestMethod -Uri $env:SLACK_WEBHOOK -Method Post -Headers $headers -Body $body
