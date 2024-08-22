@@ -25,9 +25,6 @@ jobs:
       - name: Install Maven dependencies
         run: mvn -f pom-mobile.xml install
 
-      - name: Run tests
-        run: mvn -f pom-mobile.xml test
-
       - name: Get Latest Build Number
         id: get_build_number
         shell: pwsh
