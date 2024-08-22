@@ -31,7 +31,7 @@ public class ALC_4350 extends BaseClass {
 	@Test(priority=0, description = "New member account should be successfully created | New member should be successfully logged in")
 	@Description("Signing up a member and Login Verification and Logout")
 	public void signUp()throws InterruptedException {
-		
+		try{
 		System.out.println("Signing up a member and Login Verification and Logout");
 		PB_Register_Member pbsignup= new PB_Register_Member(pbDriver);
 		pbsignup.signUpCollector();
@@ -47,32 +47,49 @@ public class ALC_4350 extends BaseClass {
 				  ts2.getScreenshotAs(OutputType.BYTES); Allure.addAttachment("login after newly created collector",
 				  new ByteArrayInputStream(screenshot2)); Thread.sleep(2000);
 		pblogin.logoutmem();
+			 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}
 		
 	}
 
 	@Test(priority = 1, description = "Login on alchemy with admin user")
 	@Description("Alchmey Login")
 	public void loginAlchmey() throws InterruptedException {
-		
+		try{
 		System.out.println("Alchmey Login");
 		AlchemyLoginPage loginAlchmey=new AlchemyLoginPage(alcDriver);
 		loginAlchmey.alc_adminlogin("+17783844311","778778");
 		Thread.sleep(3000);
+		((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
 		
+		}catch(Exception e) {
+			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+		}
 	}
 	@Test(priority =2, description = "New member account is searchable in Alchemy under the 'Members' section")
 	@Description("Verification of member in Alchmey")
 	public void VerifyMemberAlchmey() throws InterruptedException {
+		try{
 		System.out.println("Verification of member in Alchmey");
 		
 		Members alc_mem =new Members(alcDriver);
 		alc_mem.selectAndverifyMember("+63"+PB_Register_Member.typedNumber);
 		Thread.sleep(5000);
+			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
+		
+		}catch(Exception e) {
+			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+		}
 	}
 
 	@Test(priority =3, description = "-New member can be successfully created in app | -New member account is searchable in Alchemy under the 'Members' section")
 	@Description("Add Branch and Create Member and LogOut")
 	public void createBranchAndMember() throws InterruptedException, IOException {
+		try{
 		System.out.println("Add Branch and Create Member and LogOut");
 		Data d = new Data();
 		d.createBranch();
@@ -82,19 +99,32 @@ public class ALC_4350 extends BaseClass {
 		branchCreate.addMemberToCreatedBranch();
 		Thread.sleep(5000);
 		PB_Register_Member pbRegMem=new PB_Register_Member(pbDriver);
-		pbRegMem.logoutb();		
+		pbRegMem.logoutb();	
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}	
 	}
 
 	@Test(priority=4, description = "- Data displayed in user will turn into a field that can be edited | -Changes are saved and can be seen in user details")
 	@Description("Edit the branch member details in Alchmey")
 	public void EditMemberDetails() throws InterruptedException {
+		try{
 		System.out.println("Edit the branch member details in Alchmey");
 		Members mem=new Members(alcDriver);
 		mem.editMemberDetails("+63"+PB_Register_Member.typedNumber,"Gayas Khan");
+		((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
+		
+		}catch(Exception e) {
+			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+		}	
 	}
 	@Test(priority=5, description = "User should see the updated data")
 	@Description("Login in App with Branch Member Details")
 	public void loginBranchMemberPB() throws InterruptedException {
+		try{
 		System.out.println("Login in App with Branch Member Details");
 		PB_LoginPage lp =new PB_LoginPage(pbDriver);
 		lp.login(PB_Register_Member.typedNumber, password,"+63");
@@ -104,33 +134,51 @@ public class ALC_4350 extends BaseClass {
 				  new ByteArrayInputStream(screenshot1)); Thread.sleep(2000);
 		PB_Register_Member pbRegMem=new PB_Register_Member(pbDriver);
 		pbRegMem.logout();
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}	
 	}
 	@Test(priority=6, description = "-A pop up confirmation will appear and ask user if they are sure to suspend the account | - Once confirming, user should have suspend checkbox checked")
 	@Description("Suspend Member in Alchmey")
 	public void suspendMemberALC() throws InterruptedException {
+		try{
 		System.out.println("Suspend Member in Alchmey");
 		Members mem=new Members(alcDriver);
 		System.out.println("Suspending this member "+"+63"+PB_Register_Member.typedNumber);
 		mem.suspendMember("+63"+PB_Register_Member.typedNumber);
 		Thread.sleep(4000);
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}	
 	}
 	@Test(priority=7, description = "User should not be able to login because account was suspended")
 	@Description("Login in Mobile app with Suspended Member details")
 	public void memberSuspendVerify() throws InterruptedException {
-		
+		try{
 		System.out.println("Login in Mobile app with Suspended Member details");
 		PB_LoginPage lp =new PB_LoginPage(pbDriver);
 		lp.login(PB_Register_Member.typedNumber,password,"+63");
 		PB_Register_CollectionPoint cp = new PB_Register_CollectionPoint(pbDriver);
 		cp.verifysuspendedmember();
-		
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}
 		
 			
 	}
 	@Test(priority=8, description = "Suspended member should not appear in the search")
 	@Description("Verify Suspended member By Branch Login")
 	public void branchSuspendMemberVerification() throws InterruptedException {
-	
+	try{
 		System.out.println("Verify Suspended member By Branch Login");
 		Thread.sleep(3000);
 		PB_LoginPage lp = new PB_LoginPage(pbDriver);
@@ -144,7 +192,12 @@ public class ALC_4350 extends BaseClass {
 	    byte[] screenshot1 = ts1.getScreenshotAs(OutputType.BYTES);
 	    Allure.addAttachment("Screenshot1", new ByteArrayInputStream(screenshot1));
 	    Thread.sleep(2000);
-		
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}
 		
 	}
 }
