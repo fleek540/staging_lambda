@@ -11,6 +11,7 @@ import io.qameta.allure.testng.AllureTestNg;
 
 import java.io.IOException;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -25,7 +26,7 @@ public class ALC_4366 extends BaseClass {
     @Test(priority = 0, description = "Screen will display member's details page | Screen will display a prompt page to fill out to transfer the tokens | Transferring of token was complete Current member token will be added and displayed in the App Current member token will be added and displayed in the Alchemy under 'Tokens in wallet' column")
     @Description("Login on alchemy and create new bonus")
     public void tokenTransferAndVerifyInOrdersData() throws InterruptedException, IOException {
-    	
+    	try {
     	Data d3= new Data();
 		d3.createMemberBranch();
 		
@@ -35,11 +36,16 @@ public class ALC_4366 extends BaseClass {
         Orders alc_orders = new Orders(alcDriver);
         alc_members.tokenDirectTransfer(Data.member_NumberMB, "Direct Token Transfer", "1000","778899", "Transfer Completed");
         alc_orders.verifyOrdersTransferData("Shaun Frankson",Data.member_NameMB , " EPR Rewards", "Token transfer", "1000");
+((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
+		
+		}catch(Exception e) {
+			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+		}
     }
     @Test(priority = 1, description = "Transaction was recorded in transfers tab with all the correct data")
     @Description("Login on mobile app and verify token transfer in history")
     public void verifyTransferTokenOnApp()throws InterruptedException, IOException {
-
+try {
         System.out.println("Signing up a member and Login Verification and Logout");
         PB_LoginPage pblogin = new PB_LoginPage(pbDriver);
         PB_Member_Profile pbProfile = new PB_Member_Profile(pbDriver);
@@ -48,7 +54,12 @@ public class ALC_4366 extends BaseClass {
        pbProfile.tokenValueProfile();
         
         pbTransaction.verifyExchangeHistoryToken();
-       
+        ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+        
+}catch(Exception e) {
+	((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+    
+}
 
 
     }

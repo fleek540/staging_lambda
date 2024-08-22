@@ -10,6 +10,7 @@ import io.qameta.allure.testng.AllureTestNg;
 
 import java.io.IOException;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -25,7 +26,7 @@ public class ALC_4365 extends BaseClass {
 	@Test(priority=0, description = "Bonus order should be  stopped")
     @Description("Login on alchemy and create new bonus")
     public void createNewBonusAndSuspendedBonus() throws InterruptedException, IOException {
-		
+		try {
 		Data d2= new Data();
 		d2.createMemberBranch();
 		
@@ -36,19 +37,30 @@ public class ALC_4365 extends BaseClass {
         alc_orders.createBonus("Fleek_Bonus_22_1", "plastic", "10000", "7", "2", "778899", Data.branch1_NameMB);
         alc_orders.changeBranchBonusDetails();
         alc_orders.checkOrderStopped("Fleek_Bonus_22_1");
+((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
+		
+		}catch(Exception e) {
+			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+		}
     }
 
 
 	@Test(priority=1, description = "New member transaction with the branch in the stopped bonus order DOES NOT generate bonus once the Bonus order is stopped")
 	@Description("Signing up a member and Login Verification and Logout")
 	public void verifyTransactionStoppedBonus()throws InterruptedException, IOException {
+		try {
 		PB_LoginPage pblogin = new PB_LoginPage(pbDriver);
 		PB_Transaction pbTransaction = new PB_Transaction(pbDriver);
 
 		pblogin.login(Data.branch1_NumberMB.replace("+63", ""),password,"+63");
 		Thread.sleep(5000);
 		 pbTransaction.transactionBranchStopBonus(Data.member_NumberMB);
-		
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
+		}catch(Exception e) {
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
+		}
 		
 	}
 

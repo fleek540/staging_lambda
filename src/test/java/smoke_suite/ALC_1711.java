@@ -245,7 +245,7 @@ try{
 
 	@Test(priority =14,enabled=true, description = "Reclaim the Token")
 	public void reclaimToken() throws InterruptedException {
-
+try {
 		Branches b1= new Branches(alcDriver);
 		b1.reclaimToken(Data.branch1_Id1711);
 ((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
