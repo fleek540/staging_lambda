@@ -12,6 +12,8 @@ import alchemy_Pages.Members;
 import io.qameta.allure.Description;
 import plastic_Bank_Pages.PB_LoginPage;
 import plastic_Bank_Pages.PB_Member_Profile;
+import org.openqa.selenium.JavascriptExecutor;
+
 
 public class ALC_348 extends BaseClass {
 	
