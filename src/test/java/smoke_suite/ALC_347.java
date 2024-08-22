@@ -9,6 +9,9 @@ import io.qameta.allure.Description;
 import plastic_Bank_Pages.PB_LoginPage;
 import plastic_Bank_Pages.PB_Member_Profile;
 import Utilities.LambdaTestListener;
+import org.openqa.selenium.JavascriptExecutor;
+
+
 @Listeners(LambdaTestListener.class)
 public class ALC_347 extends BaseClass{
 	
