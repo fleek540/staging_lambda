@@ -41,10 +41,11 @@ public class ALC_4348 extends BaseClass{
 		//tap(200,1280);
 		pbsignup.images.get(3).click();
 		pbsignup.searchcountries.sendKeys("+63");
-		Thread.sleep(1500);
+		Thread.sleep(2500);
 		pbsignup.firstresult.click();
+		Thread.sleep(2500);
 		pbsignup.edittexts.get(3).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		pbsignup.typeRandomDigit();
 		pbsignup.typeRandomDigit();
 		pbsignup.typeRandomDigit();

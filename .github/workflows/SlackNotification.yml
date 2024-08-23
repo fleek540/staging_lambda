@@ -1,0 +1,21 @@
+name: Notify Slack
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notify-slack:
+    runs-on: windows-latest
+
+    steps:
+      - name: Send Notification to Slack
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        run: |
+          $headers = @{
+            'Content-Type' = 'application/json'
+          }
+          $body = @{
+            text = "QA Env Alternating test cases using build (PB_QA_20082024(R05)). Web Report URL: <https://automation.lambdatest.com/share?isThemeEnabled=true&selectedTab=home&shareId=IJDN91XGN23JA5INMFPFCTYO61RE3RUODA35TDHUPPQ6UC46E6F268V2BIJ5YCN7&themeVersion=v2|Automation Report> and Mobile report URL: <https://links.lambdatest.com/appautomation/7JQ05MPKPD5A01KDHA9LKST09V6DGE1PTEESXQKIGWRDKYD9QHG7UOZJD9LMT1RR|Mobile Report>"
+          } | ConvertTo-Json
+          Invoke-RestMethod -Uri $env:SLACK_WEBHOOK -Method Post -Headers $headers -Body $body
