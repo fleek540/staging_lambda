@@ -84,14 +84,22 @@ public class ALC_3710 extends BaseClass{
 		try{
 		Members m= new Members(alcDriver);
 		m.createRandomMemberWithTokens(Members.indonesia, "+62", "1000");
+		
+((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
+		
+		}catch(Exception e) {
+			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+		}		
+		try {
 		PB_LoginPage pl = new PB_LoginPage(pbDriver);
 		pl.login(Members.rnewnum,"123456a","+62");
 		PB_Member_Profile pmp = new PB_Member_Profile(pbDriver);
 		pmp.prove_Unverified_Cant_Use_Gojek();
-		((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
-		
+		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
+	        
 		}catch(Exception e) {
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+	        
 		}
 	}
 	

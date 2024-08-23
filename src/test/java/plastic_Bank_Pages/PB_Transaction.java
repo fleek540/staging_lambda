@@ -363,6 +363,8 @@ public void bToSb(String b1number) throws InterruptedException {
     searchbutton.click();
     Thread.sleep(2000);
     image.click();
+    tap(545,2018);   //tap start transaction
+	Thread.sleep(2000); //wait for sometime
     Thread.sleep(2000);
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
     hdpe.click();
@@ -417,7 +419,8 @@ public void b3ToPnb(String b3number) throws InterruptedException {
 	Thread.sleep(4000);
 	tap(500,900);
 	//image.click();
-	
+	tap(545,2018);   //tap start transaction
+	Thread.sleep(2000); //wait for sometime
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
 	hdpe.click();
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
@@ -467,7 +470,8 @@ public void bToSP(String b3number) throws InterruptedException {
     Thread.sleep(4000);
     tap(500,900);
     //image.click();
-
+    tap(545,2018);   //tap start transaction
+	Thread.sleep(2000); //wait for sometime
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
     hdpe.click();
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
@@ -656,6 +660,8 @@ public void m1toB1(String m1number) throws InterruptedException, IOException {
 	searchbutton.click();
 	
 	image.click();
+	tap(545,2018);   //tap start transaction
+	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
@@ -730,6 +736,8 @@ public void b1toB2(String b1number) throws InterruptedException, IOException {
 	searchbutton.click();
 	
 	image.click();
+	tap(545,2018);   //tap start transaction
+	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
@@ -786,6 +794,8 @@ public void b1toB3(String b1number) throws InterruptedException {
 	searchbutton.click();
 	Thread.sleep(2000);
 	image.click();
+	tap(545,2018);   //tap start transaction
+	Thread.sleep(2000); //wait for sometime
 	Thread.sleep(2000);
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
@@ -843,6 +853,8 @@ public void b3ToP(String b3number) throws InterruptedException {
 	searchbutton.click();
 	Thread.sleep(4000);
 	tap(500,900);
+	tap(545,2018);   //tap start transaction
+	Thread.sleep(2000); //wait for sometime
 	//image.click();
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
@@ -976,6 +988,8 @@ public void b2ToP(String b2number) throws InterruptedException {
 	searchbutton.click();
 	
 	image.click();
+	tap(545,2018);   //tap start transaction
+	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
@@ -1079,7 +1093,8 @@ public void tap(int x, int y) throws InterruptedException {
     	searchbutton.click();
     	
     	image.click();
-    	
+    	tap(545,2018);   //tap start transaction
+    	Thread.sleep(2000); //wait for sometime
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
     	hdpe.click();
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
@@ -1196,6 +1211,8 @@ public void tap(int x, int y) throws InterruptedException {
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
     	searchbutton.click();
     	image.click();
+    	tap(545,2018);   //tap start transaction
+    	Thread.sleep(2000); //wait for sometime
     	donationionic.click();
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
     	requiredQuantity.click();
@@ -1222,6 +1239,8 @@ public void tap(int x, int y) throws InterruptedException {
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
     	searchbutton.click();
     	image.click();
+    	tap(545,2018);   //tap start transaction
+    	Thread.sleep(2000); //wait for sometime
     	donationionic.click();
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
     	requiredQuantity.click();
