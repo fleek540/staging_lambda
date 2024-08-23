@@ -1,0 +1,82 @@
+name: Build and Notify
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build-and-notify:
+    runs-on: windows-latest
+
+    steps:
+      - name: Get Latest Automation Build Number
+        id: get_automation_build_number
+        shell: pwsh
+        run: |
+          $response = Invoke-RestMethod -Uri "https://api.lambdatest.com/automation/api/v1/builds?limit=1" -Method Get -Headers @{
+            Authorization = "Basic $([Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('ashish.rawatfleekitsolutions:MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2')))"
+          }
+          $build_id = $response.data[0].build_id
+          Write-Host "Automation Build ID: $build_id"
+          echo "AUTOMATION_BUILD_ID=$build_id" >> $env:GITHUB_ENV
+
+      - name: Get Latest Mobile Build Number
+        id: get_mobile_build_number
+        shell: pwsh
+        run: |
+          $response = Invoke-RestMethod -Uri "https://mobile-api.lambdatest.com/mobile-automation/api/v1/builds?limit=1" -Method Get -Headers @{
+            Authorization = "Basic $([Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('ashish.rawatfleekitsolutions:MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2')))"
+          }
+          $build_id = $response.data[0].build_id
+          Write-Host "Mobile Build ID: $build_id"
+          echo "MOBILE_BUILD_ID=$build_id" >> $env:GITHUB_ENV
+
+      - name: Generate Automation Shareable Link
+        id: generate_automation_shareable_link
+        shell: pwsh
+        run: |
+          $build_id = $env:AUTOMATION_BUILD_ID
+          $requestBody = @{
+            expiresAt = 3
+            themeVersion = "v2"
+            isThemeEnabled = $true
+            entityType = "Automation Build"
+            entityIds = @($build_id)
+          } | ConvertTo-Json -Compress
+          $response = Invoke-RestMethod -Uri "https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link" -Method Post -Headers @{
+            Authorization = "Basic $([Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('ashish.rawatfleekitsolutions:MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2')))"
+            'Content-Type' = 'application/json'
+          } -Body $requestBody
+          $shareUrl = $response.shareIdUrl
+          Write-Host "Automation Shareable Report URL: $shareUrl"
+          echo "AUTOMATION_SHAREABLE_URL=$shareUrl" >> $env:GITHUB_ENV
+
+      - name: Generate Mobile Shareable Link
+        id: generate_mobile_shareable_link
+        shell: pwsh
+        run: |
+          $build_id = $env:MOBILE_BUILD_ID
+          $requestBody = @{
+            entityIds = @($build_id)
+            entityType = "App Automation Build"
+            expiresAt = 7
+          } | ConvertTo-Json -Compress
+          $response = Invoke-RestMethod -Uri "https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link" -Method Post -Headers @{
+            Authorization = "Basic $([Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('ashish.rawatfleekitsolutions:MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2')))"
+            'Content-Type' = 'application/json'
+          } -Body $requestBody
+          $shareUrl = $response.shareIdUrl
+          Write-Host "Mobile Shareable Report URL: $shareUrl"
+          echo "MOBILE_SHAREABLE_URL=$shareUrl" >> $env:GITHUB_ENV
+
+      - name: Send Notification to Slack
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          AUTOMATION_SHAREABLE_URL: ${{ env.AUTOMATION_SHAREABLE_URL }}
+          MOBILE_SHAREABLE_URL: ${{ env.MOBILE_SHAREABLE_URL }}
+        run: |
+          $headers = @{
+            'Content-Type' = 'application/json'
+          }
+          $body = @{
+            text = "QA Env Alternating test cases using build (PB_QA_20082024(R05)) . Web Report URL: <$env:AUTOMATION_SHAREABLE_URL|Automation Report> and Mobile report URL: <$env:MOBILE_SHAREABLE_URL|Mobile Report>"
+          } | ConvertTo-Json
