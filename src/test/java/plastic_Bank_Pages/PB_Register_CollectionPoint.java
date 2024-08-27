@@ -655,7 +655,7 @@ public void goToProcessor(){
 public void createbranchaftermember() throws InterruptedException {
 	 wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(menuButton)));
 	    menuButton.click();
-	    tap(373,1055);
+	    tap(373,865);
 	    Thread.sleep(2000);
 	    recyclingbusiness.click();
 	    Thread.sleep(2000);

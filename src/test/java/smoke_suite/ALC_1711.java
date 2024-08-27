@@ -80,7 +80,7 @@ try{
 		}
 	}
 	
-	//pbapp-1526
+	
 	
 	@Test(priority =4,enabled=true, description = "Check member exchange history | Associated bonus from branch and Processor exchange history")
 	public void ExcHisBonusVerificationBeforeVoid() throws InterruptedException {
@@ -97,13 +97,13 @@ try{
 			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
 		}
 	}
-	//@Test(priority =5,enabled=true, description = "Verify Tokens in app for Member, Branch 1 & 2 before Void")
+	@Test(priority =5,enabled=true, description = "Verify Tokens in app for Member, Branch 1 & 2 before Void")
 	public void verifyTokenInAppBeforeBonusPaid() throws InterruptedException {
 try{
 		PB_Transaction p1 =new PB_Transaction(pbDriver);
-		p1.verifyBonusInAppMem_1711_BeforeBonusPaid();
-		p1.branchBonusPresent2(Data.branch1_Number1711,password,"30");
-		p1.branchBonusPresent2(Data.branch2_Number1711,password,"14");
+		p1.verifyBonusInAppMem_1711_BeforeBonusPaid(Data.member_Number1711.replace("+63",""),password);
+		p1.verifyBonusInAppB1_AfterBonusPaid(Data.branch1_Number1711.replace("+63",""),password);
+		p1.verifyBonusInAppB1_AfterBonusPaid(Data.branch2_Number1711.replace("+63",""),password);
 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
 	        
 		}catch(Exception e) {

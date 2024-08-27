@@ -1,0 +1,39 @@
+{
+  "id": "9ea251e6-8236-438d-972b-fe1340feca49",
+  "values": [
+    {
+      "type": "any",
+      "value": "FleekxRaUw8",
+      "key": "m1randomUsername"
+    },
+    {
+      "type": "any",
+      "value": "+639253063931",
+      "key": "m1randomNumber"
+    },
+    {
+      "type": "any",
+      "value": "AA41B87B-AEC0-6439-2B52-49782525F179",
+      "key": "m1deviceID"
+    },
+    {
+      "type": "any",
+      "value": "8f1409a6-f8d5-4757-879f-91a7154291b9",
+      "key": "m1id"
+    },
+    {
+      "type": "any",
+      "value": "8f1409a6-f8d5-4757-879f-91a7154291b9",
+      "key": "m1entityId"
+    },
+    {
+      "type": "any",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTYyNTg4MTcsInN1YiI6IjhmMTQwOWE2LWY4ZDUtNDc1Ny04NzlmLTkxYTcxNTQyOTFiOSJ9.8cbAtR38Hgd7hEG5G8o2T_LCkCBmUv06Ue0uULdtCFjcYJkZRr8um6OGZfeOJvUQBfFLYI-PjqvQ937mjcq9fg",
+      "key": "m1accessToken"
+    }
+  ],
+  "name": "environment",
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2024-08-27T11:40:17.380Z",
+  "_postman_exported_using": "Newman/5.3.2"
+}

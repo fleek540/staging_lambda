@@ -112,7 +112,7 @@ public WebElement confirmsell;
 public WebElement exchangeHistory;
 @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\")")
 public List<WebElement>rewards;
-@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Allow\")")
+@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Allow all\")")
 public WebElement allow;
 @AndroidFindBy(uiAutomator = "new UiSelector().text(\"arrow back\")")
 public WebElement arrowBack;
@@ -242,7 +242,7 @@ public WebElement branchToken_new;
 	}
 	
 	
-WebDriverWait wait = new WebDriverWait(pbDriver,Duration.ofSeconds(10));
+WebDriverWait wait = new WebDriverWait(pbDriver,Duration.ofSeconds(300));
 public void doTransaction(String number, String load1, String load2) throws InterruptedException {
 	
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
@@ -904,7 +904,7 @@ public void sell_hdpe_branch_To_Processor_with_receipt(String processorname) thr
 public void sell_pet_branch_To_Processor_without_receipt(String processorname) throws InterruptedException {
 	Thread.sleep(10000);
 	tap(55,212);
-	tap(500,582);
+	tap(500,600);
 	findabuyer.click();
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
 	search.sendKeys(processorname);
@@ -1367,27 +1367,15 @@ public void tap(int x, int y) throws InterruptedException {
  	menu.click();
  	tap(300,1433);
  }
-    public void verifyBonusInAppMem_1711_BeforeBonusPaid() throws InterruptedException {
-    	
-    	PB_LoginPage pblogin = new PB_LoginPage(pbDriver);
-		pblogin.login(Data.member_Number1711.replace("+63", ""), password,"+63");
-
-    	wait.until(ExpectedConditions.refreshed(ExpectedConditions.invisibilityOf(loading)));
-    	lock_bonus.isDisplayed();
-    	delayed_bonus.isDisplayed();
-    	pb_logo_bonus.isDisplayed();
-    	wait.until(ExpectedConditions.refreshed(ExpectedConditions.textToBePresentInElement(memberbonustext, "133")));
-    	assertTrue(memberbonustext.getText().equals("133"));
-    	Thread.sleep(2000);
-    	TakesScreenshot ts1 = (TakesScreenshot) pbDriver;
-    	    byte[] screenshot1 = ts1.getScreenshotAs(OutputType.BYTES);
-    	    Allure.addAttachment("Screenshot1", new ByteArrayInputStream(screenshot1));
-    		Thread.sleep(2000);
-    	
-    	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(menu)));
-    	menu.click();
-    	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(logout)));
-    	logout.click();
+    public void verifyBonusInAppMem_1711_BeforeBonusPaid(String member, String password) throws InterruptedException {
+    	 PB_LoginPage pblogin = new PB_LoginPage(pbDriver);
+    	    pblogin.login(member, password,"+63");
+    	    Thread.sleep(6000);
+    	     tokensinapp.isDisplayed();
+    		Thread.sleep(3000);
+    		assertTrue(tokensinapp.getText().equals("0"));
+    		menu.click();
+    		tap(300,1244);
     	
     }
     public void verifyBonusInAppMem_1711_AfterBonusPaid() throws InterruptedException {

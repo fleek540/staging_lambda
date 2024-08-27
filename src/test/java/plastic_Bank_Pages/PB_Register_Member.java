@@ -396,7 +396,7 @@ public void clickbackarrow() {
 	arrowBack.click();
 }
 public void clicklogout() throws InterruptedException {
-	tap(300,1431);
+	tap(300,1244);
 }
 public void clicklogoutb() throws InterruptedException {
 	tap(300,1431);
@@ -489,7 +489,8 @@ public void signUpCollector() throws InterruptedException {
 	Thread.sleep(2000);
 	searchcountries.sendKeys("+63");
 	Thread.sleep(1500);
-	firstresult.click();
+	tap(400,470);
+	Thread.sleep(2000);
 	edittexts.get(3).click();
 	typedNumber = getTypedNumber();
     System.out.println("Typed number: " + typedNumber);
