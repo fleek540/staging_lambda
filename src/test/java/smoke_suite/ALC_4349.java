@@ -31,7 +31,7 @@ public class ALC_4349 extends BaseClass{
 		pbDriver.pressKey(new KeyEvent(AndroidKey.F));
 		
 		pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-		tap(500,1658);
+		tap(500,1782);
 		pbsignup.pwdcriteria.isDisplayed();
 		Thread.sleep(1000);
 		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");

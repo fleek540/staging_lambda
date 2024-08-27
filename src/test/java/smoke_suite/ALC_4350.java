@@ -38,17 +38,12 @@ public class ALC_4350 extends BaseClass {
 		PB_Register_Member pbsignup= new PB_Register_Member(pbDriver);
 		pbsignup.signUpCollector();
 		Thread.sleep(3000);
-		 TakesScreenshot ts1 = (TakesScreenshot) pbDriver; byte[] screenshot1 =
-				  ts1.getScreenshotAs(OutputType.BYTES); Allure.addAttachment("collector created",
-				  new ByteArrayInputStream(screenshot1)); Thread.sleep(2000);
+		
 		pbsignup.logout();	
 		PB_LoginPage pblogin = new PB_LoginPage(pbDriver);
 		pblogin.login(PB_Register_Member.typedNumber,password,"+63");
 		Thread.sleep(5000);
-		 TakesScreenshot ts2 = (TakesScreenshot) pbDriver; byte[] screenshot2 =
-				  ts2.getScreenshotAs(OutputType.BYTES); Allure.addAttachment("login after newly created collector",
-				  new ByteArrayInputStream(screenshot2)); Thread.sleep(2000);
-		pblogin.logoutmem();
+			pblogin.logoutmem();
 			 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
 	        
 		}catch(Exception e) {
@@ -131,9 +126,7 @@ public class ALC_4350 extends BaseClass {
 		PB_LoginPage lp =new PB_LoginPage(pbDriver);
 		lp.login(PB_Register_Member.typedNumber, password,"+63");
 		Thread.sleep(5000);
-		TakesScreenshot ts1 = (TakesScreenshot) pbDriver; byte[] screenshot1 =
-				  ts1.getScreenshotAs(OutputType.BYTES); Allure.addAttachment("collector created",
-				  new ByteArrayInputStream(screenshot1)); Thread.sleep(2000);
+		
 		PB_Register_Member pbRegMem=new PB_Register_Member(pbDriver);
 		pbRegMem.logout();
 		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
@@ -190,10 +183,7 @@ public class ALC_4350 extends BaseClass {
 		
 		pt.verifyaddedmemsuspended("+63"+PB_Register_Member.typedNumber);
 		Thread.sleep(2000);
-	    TakesScreenshot ts1 = (TakesScreenshot) pbDriver;
-	    byte[] screenshot1 = ts1.getScreenshotAs(OutputType.BYTES);
-	    Allure.addAttachment("Screenshot1", new ByteArrayInputStream(screenshot1));
-	    Thread.sleep(2000);
+	   
 		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
 	        
 		}catch(Exception e) {

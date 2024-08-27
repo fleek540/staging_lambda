@@ -271,9 +271,6 @@ public void ensureMemberIsVerified() throws InterruptedException {
 @SuppressWarnings("deprecation")
 public void performDigitalCashOut() throws IOException, InterruptedException {
 	Thread.sleep(6000);
-	menu.click();
-	tap(400,490);
-	Thread.sleep(15000);
 	tokensinbegining=tokensinapp.getText();
 	tinb=Integer.parseInt(tokensinbegining);
 	System.out.println("tokens in begining "+tokensinbegining);
@@ -318,7 +315,7 @@ public void performDigitalCashOut() throws IOException, InterruptedException {
 	 * thousand.isDisplayed(); sixpoint48.isDisplayed(); idr.isDisplayed();
 	 */
 	yourcashoutinprogress.isDisplayed();
-	tap(550,2018);
+	tap(550,2140);
 	Thread.sleep(5000);
 tokensinend=tokensinapp.getText();
 	
@@ -343,7 +340,7 @@ public void performDigitalCashOutBranch() throws IOException, InterruptedExcepti
 	System.out.println("toekn on cashout page"+tokensoncop);
 	
 	//assertTrue(tokensinbegining.equals(tokensoncop));
-	tap(500,1980);
+	tap(500,1863);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_3));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
@@ -352,7 +349,7 @@ public void performDigitalCashOutBranch() throws IOException, InterruptedExcepti
 	confirmcashout.click();
 	takescreenshotofandroid("Cash-Out fee is zero");
 	yourcashoutinprogress.isDisplayed();
-	tap(545,2012);
+	tap(545,2140);
 	
 	Thread.sleep(5000);
 	
@@ -379,17 +376,17 @@ public void performDigitalCashOutCollector() throws IOException, InterruptedExce
 	System.out.println("toekn on cashout page"+tokensoncop);
 	
 	//assertTrue(tokensinbegining.equals(tokensoncop));
-	tap(500,1980);
+	tap(500,1857);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_3));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	cashoutfeegcash.isDisplayed();
 	takescreenshotofandroid("Cash-Out fee is zero");
-	scroll(500,1700,500,1000);
+	
 	confirmcashout.click();
 	yourcashoutinprogress.isDisplayed();
-	tap(545,2012);
+	tap(545,2130);
 	
 	Thread.sleep(5000);
 	
@@ -426,16 +423,15 @@ public void unlink() throws InterruptedException {
 	profile.click();
 	cashoutbtn.click();
 	Thread.sleep(5000);
-	scroll(500,350, 500,1124);
 	unlink.click();
-	tap(500,2007);
+	tap(500,2120);
 	Thread.sleep(10000);
 	text.sendKeys("abc@mail.com");
 	image.click();
 	Thread.sleep(4000);
 	linkaccount.click();
 	codesent.isDisplayed();
-	tap(151,1002);
+	tap(151,1190);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));
@@ -445,32 +441,32 @@ public void unlink() throws InterruptedException {
 	back.click();
 	Thread.sleep(5000);
 	menu.click();
-	tap(300,1170);
+	tap(300,1244);
 }
 
 public void unlinkgcash4871() throws InterruptedException {
 	profile.click();
 	cbbtnbranch.click();
-	scroll(500,350, 500,1124);
+	
 	unlink.click();
-	tap(500,2007);
+	tap(500,2129);
 	Thread.sleep(1000);
-	takescreenshotofandroid("User is able to unlink GCash account");
+	
 	image.click();
 Thread.sleep(2000);
 	linkaccount.click();
 	codesent.isDisplayed();
-	tap(151,1002);
-	tap(147,1927);
-	tap(147,1927);
-	tap(413,1927);
-	tap(413,1927);
-	tap(675,1927);
-	tap(675,1927);
-	tap(75,168);
-	tap(75,168);
-	Thread.sleep(5000);
-	
+	tap(155,1111);
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
+	Thread.sleep(2000);
+	unlink.isDisplayed();
+	Thread.sleep(2000);
+	tap(65,215);
 	
 	
 	
@@ -493,7 +489,7 @@ public void prove_Unverified_Cant_Use_Gojek() throws InterruptedException {
 
 public void prove_Unverified_Cant_Use_GCash() throws InterruptedException {
 	needToVerifyForGcash.isDisplayed();
-	takescreenshotofandroid("Unverified accounts can't perform GCash Cashout.");
+
 }
 
 
@@ -512,8 +508,8 @@ public void verifytokensarenotpresent() throws InterruptedException {
 }
 
 public void verifytokensarepresentbranch() throws InterruptedException {
-	tap(130,2070);
-
+	tap(130,2183);
+Thread.sleep(2000);
 	tokensinapp.isDisplayed();
 	assertTrue(tokensinapp.getText().equals("1000"));
 	takescreenshotofandroid("tokens in app present before being reclaimed.");
@@ -534,17 +530,18 @@ public void verifytokensarepresentstore() throws InterruptedException {
 
 public void verifytokensarepresentprocessor() throws InterruptedException {
 	menu.click();
-	tap(400,550);
-	tap(150,2060);
+	tap(400,630);
+	tap(130,2183);
 	tokensinapp.isDisplayed();
 	assertTrue(tokensinapp.getText().equals("1000"));
-	takescreenshotofandroid("tokens in app present before being reclaimed.");
+	
 }
 
 
 public void verifytokensarenotpresentbranch() throws InterruptedException {
 	
-	tap(130,2070);
+	tap(130,2183);
+	Thread.sleep(2000);
 	assertFalse(tokensinapp.getText().equals("1000"));
 	takescreenshotofandroid("tokens in app not present after being reclaimed.");
 }
@@ -571,11 +568,11 @@ public void verifytokensarenotpresentstore() throws InterruptedException {
 
 public void verifytokensarenotpresentprocessor() throws InterruptedException {
 	menu.click();
-	tap(400,560);
-	tap(150,2060);
+	tap(400,630);
+	tap(130,2183);
 	tokensinapp.isDisplayed();
 	assertFalse(tokensinapp.getText().equals("1000"));
-	takescreenshotofandroid("tokens in app not present after being reclaimed.");
+	
 	
 }
 

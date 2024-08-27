@@ -163,7 +163,7 @@ WebDriverWait wait = new WebDriverWait(pbDriver,Duration.ofSeconds(30));
 public void createprocessoraftermember() throws InterruptedException {
 	 wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(menuButton)));
 	    menuButton.click();
-	    tap(373,775);
+	    tap(373,862);
 	    Thread.sleep(2000);
 	    recyclingbusiness.click();
 	    Thread.sleep(2000);
@@ -174,19 +174,19 @@ public void createprocessoraftermember() throws InterruptedException {
 	    linkaccount.click();
 	    Thread.sleep(2000);
 	    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(dothislater)));
-	    tap(537,2005);
-	    tap(975,1315);
-	    tap(440,1650);
+	    tap(537,2126);
+	    tap(984,1305);
+	    tap(440,1792);
 	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
 	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 		pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	    
 	    
-	    tap(551,2000);
-	    tap(550,2010);
+	    tap(551,2120);
+	    tap(550,2132);
 	    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addnewmaterial)));
 	   menuButton.click();
-	   tap(330,1369);	    
+	   tap(330,1433);	    
 }
 
 public String typeRandomAlphabet() {

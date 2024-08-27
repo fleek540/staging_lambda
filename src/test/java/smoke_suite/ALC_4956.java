@@ -43,7 +43,7 @@ public class ALC_4956 extends BaseClass{
 		try{
 		PB_LoginPage login= new PB_LoginPage(pbDriver);
 		login.login(Data.member_Number4864.replace("+63", ""), "123456ab","+63");
-		takescreenshotofandroid("User is able to login with new password");
+		
 		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
 	        
 		}catch(Exception e) {

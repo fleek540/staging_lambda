@@ -196,6 +196,8 @@ public WebElement hdpeMaterial;
 public WebElement petMaterial;
 @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Clean\")")
 public WebElement cleanCondition;
+@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Search name or phone number\")")
+public WebElement snopn;
 
 public static String splitMemberName1;
 public static String splitMemberName2;
@@ -307,37 +309,37 @@ public void createSplitBranch(String branchName) throws InterruptedException {
 	Thread.sleep(2000);
 	image.click();
 	Thread.sleep(2000);
-	tap(550,1988);
+	tap(550,2131);  // take photo
 	shutter.click();
 	photoDone.click();
-	tap(550,2022);
+	tap(550,2154);   // save photo
 	//
 	Thread.sleep(2000);
-	tap(500,860);
+	tap(500,800); // name*
 
 	splitBranchMemberName1 = getTypedAlphabets();
 	    System.out.println("Typed alphabets: " + splitBranchMemberName1);
 		
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 
-	tap(200,1000);
+	tap(200,1000); // phone code
 	Thread.sleep(3000);
 	searchcountries.sendKeys("+63");
-	tap(270,466);
-	tap(660,1000);
+	tap(270,490);   // result after search code
+	tap(660,1000);  // number
 
 	typedNumberforsplitbranch = getTypedNumber();
     System.out.println("Typed number: " + typedNumber);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	edittexts.get(3).click();
 	
-	scroll(718,1024,718,1800);
-	scroll(718,1024,718,1800);
+	scroll(775,980,775,1350);
+	scroll(775,980,775,1350);
 	
 	done.click();
 
-	tap(400,1440);
-	tap(140,883);
+	tap(400,1440);  // gender
+	tap(140,905);     // male option
 	scroll(500,2100,500,1555);
 	edittexts.get(4).sendKeys("123456a");
 	edittexts.get(5).sendKeys("123456a");
@@ -346,13 +348,13 @@ public void createSplitBranch(String branchName) throws InterruptedException {
 	tickimage.click();
 	register.click();
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(resend)));
-	tap(156,1080);
-	tap(147,1927);
-	tap(147,1927);
-	tap(413,1927);
-	tap(413,1927);
-	tap(675,1927);
-	tap(675,1927);
+	tap(156,1100);
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
+	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(savematerial)));
 
 	// 0-Category , 1-Type , 2-Condition , 3-Color , 4-Value
@@ -360,14 +362,14 @@ public void createSplitBranch(String branchName) throws InterruptedException {
 	editButtons.get(1).click();
 	Thread.sleep(2000);
 	hdpeMaterial.click();
-	tap(551,2000);
+	tap(551,2118);
 	cleanCondition.click();
-	tap(551,2000);
+	tap(551,2118);
 	colorClear.click();
-	tap(551,2000);
+	tap(551,2118);
 
 	edittexts.get(0).sendKeys("10");
-	tap(551,2000);
+	tap(551,2118);
 
 	savematerial.click();
 
@@ -378,63 +380,49 @@ public void createSplitBranch(String branchName) throws InterruptedException {
 	editButtons.get(1).click();
 	Thread.sleep(2000);
 	petMaterial.click();
-	tap(551,2000);
+	tap(551,2118);
 	cleanCondition.click();
-	tap(551,2000);
+	tap(551,2118);
 	colorClear.click();
-	tap(551,2000);
+	tap(551,2118);
 
 	edittexts.get(0).sendKeys("10");
-	tap(551,2000);
+	tap(551,2118);
 
 	savematerial.click();
 
 	wait.until(ExpectedConditions.visibilityOf(addnewmaterial));
-	tap(140,2044);
+	tap(140,2197);
 
-
-	TakesScreenshot ts1 = (TakesScreenshot) pbDriver;
-	byte[] screenshot1 = ts1.getScreenshotAs(OutputType.BYTES);
-	Allure.addAttachment("new branch created directly",new ByteArrayInputStream(screenshot1));
-	Thread.sleep(2000);
+Thread.sleep(1000);
+	
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(menuButton)));
 
 }
 public void toggleOffMember() throws InterruptedException {
-tap(140,2044);
-tap(140,2044);
-	scroll(500,1700,500,800);
-	Thread.sleep(1000);
-	wait.until(ExpectedConditions.visibilityOf(manageCommunityButton));
-	manageCommunityButton.click();
-	Thread.sleep(2000);
-	tap(940,950);
 
-	Thread.sleep(2000);
-
-	TakesScreenshot ts1 = (TakesScreenshot) pbDriver;
-	byte[] screenshot1 = ts1.getScreenshotAs(OutputType.BYTES);
-	Allure.addAttachment("Disabling one Branch",new ByteArrayInputStream(screenshot1));
-	Thread.sleep(2000);
-
+Thread.sleep(4000);
+snopn.isDisplayed();
+tap(936,970);
+Thread.sleep(2000);
 	back.click();
 
 }
 
 public void addMemberToCreatedSplitBranch1() throws InterruptedException {
 
-	tap(140,2044);
+	tap(140,2197);  //home
 	Thread.sleep(2000);
 	wait.until(ExpectedConditions.elementToBeClickable(manageCommunityButton));
 	manageCommunityButton.click();
 	addmember.click();
 	Thread.sleep(2000);
 	images.get(0).click();
-	tap(540,2001);
+	tap(550,2131);  // take photo
 	shutter.click();
 	photoDone.click();
-	tap(548,2018);
-	tap(400,1115);
+	tap(550,2154);   // save photo
+	tap(400,1120);   //name*
 	pbDriver.pressKey(new KeyEvent(AndroidKey.M));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.E));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.M));
@@ -443,34 +431,33 @@ public void addMemberToCreatedSplitBranch1() throws InterruptedException {
     System.out.println("Typed alphabets: " + splitMemberName1);
 
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-	tap(660,1350);
+	tap(660,1334);   //number
 
 	typedNumber = getTypedNumber();
     System.out.println("Typed number: " + typedNumber);
 
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-	tap(500,1570);
+	tap(500,1546);  // dob
 	Thread.sleep(2000);
 	
-	scroll(718,1024,718,1800);
-	scroll(718,1024,718,1800);
+	scroll(800,1024,800,1300);   // scroll for year
+	scroll(800,1024,800,1300);   //scroll for year
 	
 	done.click();
 
 	scroll(500,1776,500,700);
 
 	//Selecting gender by tapping
-	tap(446,1470);
-	tap(185,925);
+	tap(446,1626);
+	tap(185,1105);
 
 	Thread.sleep(2000);
 
 	//selecting role by tapping
-	tap(446,1700);
-	tap(185,1000);
+	tap(446,1829);
+	tap(185,1187);
 
-//edittexts.get(4).sendKeys("123456a");
-//edittexts.get(5).sendKeys("123456a");
+	Thread.sleep(2000);
 
 	images.get(5).click();
 	register.click();
@@ -478,19 +465,17 @@ public void addMemberToCreatedSplitBranch1() throws InterruptedException {
 
 }
 public void addMemberToCreatedSplitBranch2() throws InterruptedException {
-
-	tap(140,2044);
-	Thread.sleep(2000);
-	wait.until(ExpectedConditions.elementToBeClickable(manageCommunityButton));
-	manageCommunityButton.click();
+	Thread.sleep(5000);
+	snopn.isDisplayed();
+	
 	addmember.click();
 	Thread.sleep(2000);
 	images.get(0).click();
-	tap(540,2001);
+	tap(550,2131);  // take photo
 	shutter.click();
 	photoDone.click();
-	tap(548,2018);
-	tap(400,1115);
+	tap(550,2154);   // save photo
+	tap(400,1120);   //name*
 	pbDriver.pressKey(new KeyEvent(AndroidKey.M));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.E));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.M));
@@ -499,39 +484,37 @@ public void addMemberToCreatedSplitBranch2() throws InterruptedException {
     System.out.println("Typed alphabets: " + splitMemberName2);
 
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-	tap(660,1350);
+	tap(660,1334);   //number
 
 	typedNumber = getTypedNumber();
     System.out.println("Typed number: " + typedNumber);
 
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-	tap(500,1570);
+	tap(500,1546);  // dob
 	Thread.sleep(2000);
 	
-	scroll(718,1024,718,1800);
-	scroll(718,1024,718,1800);
+	scroll(800,1024,800,1300);   // scroll for year
+	scroll(800,1024,800,1300);   //scroll for year
 	
 	done.click();
 
 	scroll(500,1776,500,700);
 
 	//Selecting gender by tapping
-	tap(446,1470);
-	tap(185,925);
+	tap(446,1626);
+	tap(185,1105);
 
 	Thread.sleep(2000);
 
 	//selecting role by tapping
-	tap(446,1700);
-	tap(185,1000);
+	tap(446,1829);
+	tap(185,1187);
 
-//edittexts.get(4).sendKeys("123456a");
-//edittexts.get(5).sendKeys("123456a");
+	Thread.sleep(2000);
 
 	images.get(5).click();
 	register.click();
 	Thread.sleep(5000);
-
 }
 
 
@@ -616,39 +599,36 @@ public String getTypedNumber() {
 public void addMemberToCreatedBranch() throws InterruptedException {
 	addmember.click();
 	images.get(0).click();
-	tap(540,2001);
+	tap(540,2126);
 	Thread.sleep(4000);
 	shutter.click();
 	photoDone.click();
-    tap(548,2018);
-    tap(400,1115);
+    tap(548,2135);
+    tap(400,1125);
     typedAlphabets = getTypedAlphabets();
     System.out.println("Typed alphabets: " + typedAlphabets);
 	
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-    tap(660,1350);
+    tap(660,1345);
     typedNumber = getTypedNumber();
     System.out.println("Typed number: " + typedNumber);
 	
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	edittexts.get(4).click();
 	
-	scroll(718,1024,718,1800);
-	scroll(718,1024,718,1800);
+	scroll(780,960,780,1352);
+	scroll(780,960,780,1352);
 	
 	done.click();
 	scroll(500,1776,500,700);
-	tap(446,1250);
-	tap(446,1555);
-//	edittexts.get(4).sendKeys("123456a");
-//	edittexts.get(5).sendKeys("123456a");
+	tap(446,1419);
+	tap(446,1685);
+
 	images.get(5).click();
 	register.click();
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(startexchange)));
-	tap(545,1983);
-	/*
-	 * scroll(500,470,500,1795); tap(274,390);
-	 */
+	tap(545,2115);
+	
 }
 
 
@@ -675,30 +655,31 @@ public void goToProcessor(){
 public void createbranchaftermember() throws InterruptedException {
 	 wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(menuButton)));
 	    menuButton.click();
-	    tap(373,750);
+	    tap(373,1055);
+	    Thread.sleep(2000);
 	    recyclingbusiness.click();
 	    Thread.sleep(2000);
 	    collectionpoint.click();
 	    edittexts.get(1).sendKeys("MB"+RandomStringUtils.randomAlphabetic(8));
-	    tap(500,2050);
+	    tap(500,2137);
 	    Thread.sleep(20000);
-	    tap(537,2007);
-	    tap(975,1315);
-	    tap(440,1650);
+	    tap(537,2123);
+	    tap(985,1305);
+	    tap(440,1778);
 	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
 	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 		pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	    
 	    
-	    tap(551,2000);
-	    tap(550,2010);
+	    tap(551,2126);
+	    tap(550,2146);
 	    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addnewmaterial)));
 	   menuButton.click();
-	   tap(330,1369);	    
+	   tap(330,1433);	    
 }
 
 public void checkupdateddata() throws InterruptedException {
-	tap(145,2070);
+	tap(130,2183);
 	updatedname.isDisplayed();
 	takescreenshotofandroid("Updated name is visible to user.");
 	
@@ -714,12 +695,12 @@ public void createbranchdirectly() throws InterruptedException {
 	Thread.sleep(2000);
 	image.click();
 	Thread.sleep(2000);
-	tap(550,1988);
+	tap(550,2120);
 	shutter.click();
 	photoDone.click();
-	tap(550,2022);
+	tap(550,2150);
 	//
-	tap(500,773);
+	tap(500,786);
 	 typedAlphabets = "mainak "+getTypedAlphabets();
 	    System.out.println("Typed alphabets: " + typedAlphabets);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
@@ -733,11 +714,11 @@ public void createbranchdirectly() throws InterruptedException {
 	    System.out.println("Typed number: " + typedNumber);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	edittexts.get(3).click();
-	scroll(718,1024,718,1800);
-	scroll(718,1024,718,1800);
+	scroll(780,975,780,1300);
+	scroll(780,975,780,1300);
 	done.click();
-	tap(400,1450);
-	tap(140,883);
+	tap(400,1430);
+	tap(140,910);
 	scroll(500,2100,500,1555);
 	edittexts.get(4).sendKeys("123456a");
 	edittexts.get(5).sendKeys("123456a");
@@ -746,7 +727,7 @@ public void createbranchdirectly() throws InterruptedException {
 	tickimage.click();
 	register.click();
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(resend)));
-	tap(156,1080);
+	tap(150,1086);
 	 pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	 pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	 pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));
@@ -754,16 +735,16 @@ public void createbranchdirectly() throws InterruptedException {
 	 pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
 	 pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(savematerial)));
-	 tap(975,1315);
-	 tap(440,1650);
+	 tap(984,1305);
+	 tap(440,1792);
 	 pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
 	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 		pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-	    tap(551,2000);
+	    tap(551,2120);
 	    savematerial.click();
 	    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(menuButton)));
 	   menuButton.click();
-	   tap(330,1369);	    
+	   tap(330,1433);	    
 
 }
 }

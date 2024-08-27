@@ -1,0 +1,94 @@
+{
+  "id": "389e78a1-6b5b-4457-a8f7-cdca88f92a81",
+  "values": [
+    {
+      "type": "any",
+      "value": "FleekMTIFpF",
+      "key": "b1randomUsername"
+    },
+    {
+      "type": "any",
+      "value": "+639413180561",
+      "key": "b1randomNumber"
+    },
+    {
+      "type": "any",
+      "value": "E5FDC91E-4B47-794B-B2B6-0CE408E3EB95",
+      "key": "b1deviceID"
+    },
+    {
+      "type": "any",
+      "value": "39031e48-d11e-41c3-872c-ce10176cbf13",
+      "key": "b1id"
+    },
+    {
+      "type": "any",
+      "value": "39031e48-d11e-41c3-872c-ce10176cbf13",
+      "key": "b1entityId"
+    },
+    {
+      "type": "any",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTU5MTM5NTEsInN1YiI6IjM5MDMxZTQ4LWQxMWUtNDFjMy04NzJjLWNlMTAxNzZjYmYxMyJ9.g6g3__kTR0G1GpVY5n6p7F5P4aVeMyz1N1zSby7BHQBvhGmD3nTJM_o0D9wVL9yIKym4z8vX5uO-JhbWYGJwOQ",
+      "key": "b1accessToken"
+    },
+    {
+      "type": "any",
+      "value": "brancha_djpFhRrJ",
+      "key": "b1randomBranchName"
+    },
+    {
+      "type": "any",
+      "value": "62b9c83d-28a1-4739-8337-46e2e90adc0e",
+      "key": "b1branchid"
+    },
+    {
+      "type": "any",
+      "value": "acb33089-37e1-44fa-a927-722afdefeb15",
+      "key": "b1item1Id"
+    },
+    {
+      "type": "any",
+      "value": "Fleek7oNpfh",
+      "key": "p1randomUsername"
+    },
+    {
+      "type": "any",
+      "value": "+631392355758",
+      "key": "p1randomNumber"
+    },
+    {
+      "type": "any",
+      "value": "32B28308-F8CB-666A-AF2E-F099AA8ABC91",
+      "key": "p1deviceID"
+    },
+    {
+      "type": "any",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTU5MTM5NjEsInN1YiI6IjYzYWI0NWE3LTc1ZjYtNDQzYy1iMWE3LTRhZjJkMmRjYmViMiJ9.ptpxcAyakmTzm6pqTOmGcnP0UM_zye33170AvBnoFAAqJJQredpiXjd85OGym_mWSnuRxWnNXgcS78VGB7DPqw",
+      "key": "p1accessToken"
+    },
+    {
+      "type": "any",
+      "value": "63ab45a7-75f6-443c-b1a7-4af2d2dcbeb2",
+      "key": "p1userId"
+    },
+    {
+      "type": "any",
+      "value": "process_ZxUgUIDy",
+      "key": "p1randomProcessorName"
+    },
+    {
+      "type": "any",
+      "value": "01a2eeef-d176-4d16-930e-debc3fb598b7",
+      "key": "p1processorid"
+    },
+    {
+      "type": "any",
+      "value": "af5c1f11-8532-46e0-bcac-c643fd7c5298",
+      "key": "p1item1Id"
+    }
+  ],
+  "name": "environment",
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2024-08-23T11:52:46.371Z",
+  "_postman_exported_using": "Newman/5.3.2"
+}

@@ -33,12 +33,13 @@ public class ALC_4348 extends BaseClass{
 		Thread.sleep(2000);
 		pbsignup.image.click();
 		Thread.sleep(2000);
-		tap(550,1988);
+		tap(550,2120);
 		pbsignup.shutter.click();
 		pbsignup.photoDone.click();
-		tap(550,2022);
+		tap(550,2154);
+		Thread.sleep(2000);
 		pbsignup.edittexts.get(1).sendKeys("Mainak "+RandomStringUtils.randomAlphabetic(5));
-		//tap(200,1280);
+		Thread.sleep(1000);
 		pbsignup.images.get(3).click();
 		pbsignup.searchcountries.sendKeys("+63");
 		Thread.sleep(2500);
@@ -59,7 +60,7 @@ public class ALC_4348 extends BaseClass{
 		pbsignup.edittexts.get(4).click();
 		Thread.sleep(2000);
 		
-		scroll(718,1024,718,1800);
+		scroll(780,990,780,1352);
 		Thread.sleep(4000);
 		pbsignup.done.click();
 		pbsignup.gender.click();
@@ -90,7 +91,7 @@ public class ALC_4348 extends BaseClass{
 		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(pbsignup.codesent)));
 		pbsignup.codesent.isDisplayed();
 		takescreenshotofandroid("Registration successful if tried after 3 minutes since previous registration");
-		tap(500,2025);
+		
 		PB_LoginPage pb= new PB_LoginPage(pbDriver);
 		Thread.sleep(5000);
 		pb.logoutmem();

@@ -177,8 +177,8 @@ public void clickSignUpButton() throws InterruptedException {
 	permission.click();
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(englishopt)));
 	englishopt.click();
-	scroll(500,1050,500,800);
-	tap(500,2060);
+	
+	tap(500,2137);
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(signUpButton)));
 	signUpButton.click();
 	
@@ -388,7 +388,7 @@ public void verifyAccount() throws InterruptedException {
 
 public void clickmenu() throws InterruptedException {
 	Thread.sleep(2000);
-		tap(60,155);
+		tap(75,206);
 }
 public void clickbackarrow() {
 	WebDriverWait wait = new WebDriverWait(pbDriver,Duration.ofSeconds(30));
@@ -396,10 +396,10 @@ public void clickbackarrow() {
 	arrowBack.click();
 }
 public void clicklogout() throws InterruptedException {
-	tap(300,1170);
+	tap(300,1431);
 }
 public void clicklogoutb() throws InterruptedException {
-	tap(300,1369);
+	tap(300,1431);
 }
 public void skipForNow() {
 	WebDriverWait wait = new WebDriverWait(pbDriver,Duration.ofSeconds(30));
@@ -478,12 +478,12 @@ public String getTypedNumber() {
 public void signUpCollector() throws InterruptedException {
 	clickSignUpButton();
 	chooseCollectorPannel();
-	tap(685,595);
+	tap(679,620);
 	Thread.sleep(2000);
-	tap(550,2007);
+	tap(550,2120);
 	shutter.click();
 	photoDone.click();
-	tap(550,2022);
+	tap(550,2154);
 	edittexts.get(1).sendKeys("Mainak "+RandomStringUtils.randomAlphabetic(5));
 	tap(200,1180);
 	Thread.sleep(2000);
@@ -496,7 +496,7 @@ public void signUpCollector() throws InterruptedException {
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	edittexts.get(4).click();
 	
-	scroll(718,1024,718,1800);
+	scroll(780,990,780,1352);
 	Thread.sleep(4000);
 	done.click();
 	gender.click();
@@ -510,7 +510,7 @@ public void signUpCollector() throws InterruptedException {
 	WebDriverWait wait = new WebDriverWait(pbDriver,Duration.ofSeconds(300));
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(codesent)));
 	codesent.isDisplayed();
-	tap(156,1080);
+	tap(151,1190);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));

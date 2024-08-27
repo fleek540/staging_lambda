@@ -309,11 +309,8 @@ public void selectAndverifyMember(String pNum) throws InterruptedException {
 	
 	String verifyName= tableData_FirstRow.getText();
 	System.out.println("Printing after getting Text: "+verifyName);
-	Thread.sleep(2000);
-    TakesScreenshot ts1 = (TakesScreenshot) alcDriver;
-    byte[] screenshot1 = ts1.getScreenshotAs(OutputType.BYTES);
-    Allure.addAttachment("Screenshot1", new ByteArrayInputStream(screenshot1));
-    Thread.sleep(2000);
+	Thread.sleep(10000);
+   
 	assert verifyName.contains("Mainak");
 	
 	}

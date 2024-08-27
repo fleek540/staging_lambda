@@ -108,15 +108,15 @@ public class ALC_4351 extends BaseClass {
 		Thread.sleep(20000);
 		lp.logout();
 		lp.login(Data.member_Number4864.replace("+63", ""),"123456a", "+63");
-		tap(61,151);
-		tap(400,560);
+		tap(52,209);
+		tap(400,580);
 		pbDriver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 		lp.susmem.isDisplayed();
 		takescreenshotofandroid("User seeing the suspended account pop up.");
 		lp.oKButton.click();
 		pbDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		tap(61,155);
-		tap(300,1369);
+		tap(51,209);
+		tap(300,1433);
 		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
 	        
 		}catch(Exception e) {
@@ -195,15 +195,15 @@ public class ALC_4351 extends BaseClass {
 		Thread.sleep(20000);
 		lp.logout();
 		lp.login(PB_Register_CollectionPoint.typedNumber,"123456a", "+63");
-		tap(61,151);
-		tap(400,560);
+		tap(51,209);
+		tap(400,580);
 		pbDriver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 		lp.susmem.isDisplayed();
 		takescreenshotofandroid("User seeing the suspended account pop up.");
 		lp.oKButton.click();
 		pbDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		tap(60,155);
-		tap(300,1369);
+		tap(51,209);
+		tap(300,1433);
 		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
 	        
 		}catch(Exception e) {

@@ -42,7 +42,7 @@ public class ALC_4871 extends BaseClass{
 		PB_Member_Profile pmp = new PB_Member_Profile(pbDriver);
 		Thread.sleep(5000);
 		pmp.menu.click();
-		tap(400,480);
+		tap(400,400);
 		pmp.performDigitalCashOutCollector();
 		pmp.checkexhistory4871();
 		pmp.unlinkgcash4871();

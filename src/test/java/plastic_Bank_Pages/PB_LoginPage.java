@@ -188,8 +188,7 @@ public void login(String phoneNumber, String password, String code) throws Inter
 			pbDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		permission.click();
 		engopt.click();
-		scroll(500,1050,500,800);
-		tap(500,2060);
+		tap(500,2143); //continue
 		pbDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		}
 		catch(Exception e) {
@@ -202,6 +201,7 @@ public void login(String phoneNumber, String password, String code) throws Inter
 	countrycode.click();
 	Thread.sleep(5000);
 	searchcountries.sendKeys(code);
+	Thread.sleep(2000);
 	firstresult.click();
 	enterPhoneNumber(phoneNumber);
 	enterPassword(password);
@@ -240,11 +240,11 @@ public void clickSuspendedMemebr() {
 }
 
 public void clickmenu() throws InterruptedException {
-	tap(60,155);
+	tap(74,209);
 }
 
 public void clicklogout() throws InterruptedException {
-	tap(300,1369);
+	tap(300,1433);
 }
 public void logout() throws InterruptedException{
 	clickmenu();
@@ -253,7 +253,7 @@ public void logout() throws InterruptedException{
 
 
 public void clicklogoutmem() throws InterruptedException {
-	tap(300,1170);
+	tap(300,1244);
 }
 public void logoutmem() throws InterruptedException{
 	clickmenu();

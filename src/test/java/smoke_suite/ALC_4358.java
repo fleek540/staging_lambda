@@ -33,9 +33,8 @@ try{
         Thread.sleep(2000);
         branchCreate.addMemberToCreatedSplitBranch1();
         Thread.sleep(2000);
-        tap(60,145);
         branchCreate.addMemberToCreatedSplitBranch2();
-        branchCreate.back.click();
+    
  ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
 	        
 		}catch(Exception e) {
