@@ -26,26 +26,23 @@ public class ALC_4360 extends BaseClass{
 	public void makeTransaction() throws IOException {
 		Data p= new Data();
 		p.runonceFor_ALC_4360();
+		 teststatus=true;
 	}
 	
 	@Test(priority=1,description="verify Kg recycled and Delayed Bonus in Branch1 and Branch2 ")
 	public void verifyKgRecycledAndDelayedBonus() throws InterruptedException {
-		try{
+	
 		AlchemyLoginPage loginAlchmey=new AlchemyLoginPage(alcDriver);
         loginAlchmey.alc_adminlogin(adminphoneNumber,adminpassword);
         Branches b= new Branches(alcDriver);
         b.verifykgrecycled();
         b.verifyDelayedBonus();
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
-		
-		}catch(Exception e) {
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
-		}
+        teststatus=true;
 	}
 	
         @Test(priority=2,description="verify delayed bonus is appearing in APP for member and branch 1 and branch 2 based on the transaction")
         public void verifyDelayedBonusInApp() throws InterruptedException, IOException {
-		try{
+		
         	      PB_LoginPage lo =new PB_LoginPage(pbDriver); 
         	      lo.login(Data.mnum4360.replace("+63", ""), password,"+63"); 
         	      PB_Transaction p=new PB_Transaction(pbDriver);
@@ -58,51 +55,34 @@ public class ALC_4360 extends BaseClass{
        			  lo2.login(Data.b2number4360.replace("+63", ""), password,"+63");
        			  PB_Transaction p2=new PB_Transaction(pbDriver);
        			  p2.verifyBranch2BonusPresent();                             
-       	((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
-	        
-		}catch(Exception e) {
-			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
-	        
-		}		
+       			 teststatus=true;		
        			  
  }
         
     @Test(priority=3,description="Bonus BUY AND SELL transactions are appearing in the Bonus order approval screen")
     public void verifyBuySellTransactionInBonusOrder() throws InterruptedException, IOException {
-    try{
+ 
     	Orders o= new Orders(alcDriver);
         o.buySellPresent();
-	((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
-		
-		}catch(Exception e) {
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
-		}    
+        teststatus=true;    
     }
 	@Test(priority=4,description="Bonus is disabled and associated bonus is dissapering in Branch1 and Branch2 Exchange History")
 	public void disablebonusAndVerifyExchangeHistory() throws InterruptedException {
-		try{
+		
 		Branches b= new Branches(alcDriver);
 		b.disablebonus();
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
-		
-		}catch(Exception e) {
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
-		}
+		 teststatus=true;
 	}
 	@Test(priority=5,description="verify Buy Sell Transaction removed from BonusOrder Approval Screen |Verify after disabling, Bonus progress value in the Bonus order Summary screen is showing zero as value with 0% fulfilled status ")
 	public void verifyBuySellRemovedBonusInBonusOrderSummary() throws InterruptedException {
-		try{
+	
 		Orders o= new Orders(alcDriver);
 		o.verifyBonusOrderSummaryAndApprovalSteps();
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
-		
-		}catch(Exception e) {
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
-		}
+		 teststatus=true;
 	}
 	@Test(priority=6,description="Delayed Bonus Is removed in App for Member and Branch1 and Branch2 profile screen")
 	public void delayedBonusRemovedInApp() throws InterruptedException {
-		try{
+	
 		PB_LoginPage lo =new PB_LoginPage(pbDriver);
 		lo.login(Data.mnum4360.replace("+63", ""), password,"+63");
         PB_Transaction p=new PB_Transaction(pbDriver);
@@ -115,13 +95,9 @@ public class ALC_4360 extends BaseClass{
         lo2.login(Data.b2number4360.replace("+63", ""), password,"+63");
         PB_Transaction p2=new PB_Transaction(pbDriver);
         p2.verifyBranch2BonusNotPresent();
-			 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
-	        
-		}catch(Exception e) {
-			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
-	        
+        teststatus=true;   
 		}
 	}
 	
 	
-}
+

@@ -188,7 +188,7 @@ public void login(String phoneNumber, String password, String code) throws Inter
 			pbDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		permission.click();
 		engopt.click();
-		tap(500,2143); //continue
+		tap(500,2155); //continue
 		pbDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		}
 		catch(Exception e) {
@@ -244,7 +244,7 @@ public void clickmenu() throws InterruptedException {
 }
 
 public void clicklogout() throws InterruptedException {
-	tap(300,1433);
+	tap(300,1391);
 }
 public void logout() throws InterruptedException{
 	clickmenu();

@@ -85,7 +85,7 @@ public void transactionStatusInAlchemyReportsforgcash() throws InterruptedExcept
 	Thread.sleep(2000);
 	lastpage.click();
 	Thread.sleep(2000);
-    takescreenshotof(pendingstatus,"Transaction is pending in alchemy reports tab.");
+	pendingstatus.isDisplayed();
     
 }
 

@@ -9,83 +9,22 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">536,801</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">34,177</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">smoke_suite.ALC_258</td><td><a href="#m0">afterMethod</a></td><td rowspan="1">1724767127608</td><td rowspan="1">696</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">smoke_suite.ALC_258</td><td><a href="#m1">selltoprocessor</a></td><td rowspan="1">1724767097482</td><td rowspan="1">30112</td></tr><tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">smoke_suite.ALC_258</td><td><a href="#m2">afterMethod</a></td><td rowspan="1">1724767128337</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">teardownalchemy</a></td><td rowspan="1">1724767128343</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">teardownapp</a></td><td rowspan="1">1724767128346</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">smoke_suite.ALC_258</td><td><a href="#m5">verifytransactions</a></td><td rowspan="1">1724767128325</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">smoke_suite.ALC_258</td><td><a href="#m6">checkalchemy</a></td><td rowspan="1">1724766667613</td><td rowspan="1">29735</td></tr><tr class="passedeven"><td><a href="#m7">createdata</a></td><td rowspan="1">1724766620764</td><td rowspan="1">46506</td></tr><tr class="passedeven"><td><a href="#m8">dotransactions</a></td><td rowspan="1">1724766697368</td><td rowspan="1">400103</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">smoke_suite.ALC_4956</td><td><a href="#m0">changepassword</a></td><td rowspan="1">1728389950586</td><td rowspan="1">1200</td></tr><tr class="failedeven"><td><a href="#m1">loginWithNewPassword</a></td><td rowspan="1">1728389953034</td><td rowspan="1">1366</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">smoke_suite.ALC_4956</td><td><a href="#m2">createmember</a></td><td rowspan="1">1728389941586</td><td rowspan="1">7697</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">smoke_suite.ALC_258#afterMethod</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=selltoprocessor status=FAILURE method=ALC_258.selltoprocessor()[pri:3, instance:smoke_suite.ALC_258@50313382] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, screenshot {}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
-	at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
-	at Utilities.BaseClass.afterMethod(BaseClass.java:435)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">smoke_suite.ALC_258#selltoprocessor</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, executeScript {script=lambda-hook: {&quot;action&quot;: &quot;setTestStatus&quot;,&quot;arguments&quot;: {&quot;status&quot;:&quot;failed&quot;, &quot;remark&quot;:&quot;This is a failed test &quot;}} , args=[]}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
-	at smoke_suite.ALC_258.selltoprocessor(ALC_258.java:67)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+<h2>Default test</h2><h3 id="m0">smoke_suite.ALC_4956#changepassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:74)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:43)
+	at plastic_Bank_Pages.PB_LoginPage.clickFinalLogin(PB_LoginPage.java:119)
+	at plastic_Bank_Pages.PB_LoginPage.login(PB_LoginPage.java:199)
+	at smoke_suite.ALC_4956.changepassword(ALC_4956.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
@@ -111,39 +50,20 @@ Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">smoke_suite.ALC_258#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">smoke_suite.ALC_258#teardownalchemy</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">smoke_suite.ALC_258#teardownapp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">smoke_suite.ALC_258#verifytransactions</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, screenshot {}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
-	at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
-	at Utilities.BaseClass.afterMethod(BaseClass.java:435)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+<h3 id="m1">smoke_suite.ALC_4956#loginWithNewPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:74)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:43)
+	at plastic_Bank_Pages.PB_LoginPage.clickFinalLogin(PB_LoginPage.java:119)
+	at plastic_Bank_Pages.PB_LoginPage.login(PB_LoginPage.java:199)
+	at smoke_suite.ALC_4956.loginWithNewPassword(ALC_4956.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
@@ -167,8 +87,6 @@ Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">smoke_suite.ALC_258#checkalchemy</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">smoke_suite.ALC_258#createdata</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">smoke_suite.ALC_258#dotransactions</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">smoke_suite.ALC_4956#createmember</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -3,26 +3,25 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="smoke_suite.ALC_258">
+      <class name="smoke_suite.ALC_4956">
         <methods>
-          <include name="verifytransactions"/>
-          <include name="teardownalchemy"/>
-          <include name="afterMethod"/>
-          <include name="generateRandomLastName"/>
-          <include name="generateBrandName"/>
           <include name="generateBenefitOrderName"/>
           <include name="generateBranchName"/>
-          <include name="generateRandomNumber"/>
-          <include name="generateRandomBranchMemberNumber"/>
+          <include name="generateRandomLastName"/>
+          <include name="generateBrandName"/>
+          <include name="changepassword"/>
           <include name="generateBonusName"/>
-          <include name="selltoprocessor"/>
-          <include name="generateAndroidBenefitname"/>
+          <include name="generateRandomNumber"/>
+          <include name="loginWithNewPassword"/>
+          <include name="generateRandomBranchMemberNumber"/>
           <include name="teardownapp"/>
-          <include name="generateBenefitName"/>
+          <include name="generateAndroidBenefitname"/>
           <include name="setup"/>
+          <include name="generateBenefitName"/>
+          <include name="mark_test_status"/>
           <include name="generateBranchMemberName"/>
         </methods>
-      </class> <!-- smoke_suite.ALC_258 -->
+      </class> <!-- smoke_suite.ALC_4956 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

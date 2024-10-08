@@ -243,10 +243,9 @@ public void searchAddedMember(String memberName) {
 }
 
 	public void searchAddedMemberByPhone(String memberNumber) {
-		WebDriverWait wait = new WebDriverWait(alcDriver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.invisibilityOf(pageLoader));
+		waitforloader();
 		phoneSearchBox.sendKeys(memberNumber);
-		wait.until(ExpectedConditions.invisibilityOf(pageLoader));
+		waitforloader();
 	}
 	public void searchAddedMemberByPhone380(String memberName) throws InterruptedException {
 		//WebDriverWait wait = new WebDriverWait(alcDriver, Duration.ofSeconds(30));
@@ -264,7 +263,7 @@ public void clickMembersTab() {
 }
 
 public void clickSpecificMember() throws InterruptedException {
-	Thread.sleep(15000);
+	waitforloader();
 	tableData_FirstRow.click();
 	
 }
@@ -371,9 +370,7 @@ public void refresh() {
 		directTokenTransfer.click();
 	}
 	private String verify_DirectTokenTransferTextPopUp() throws InterruptedException {
-		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(alcDriver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.invisibilityOf(pageLoader));
+		waitforloader();
 		return directTokenTransfer_PopUp.getText();
 	}
 	private void enterAmountTransferToken(String amount){
@@ -384,10 +381,6 @@ public void refresh() {
 		tokenType.click();
 		Thread.sleep(2000);
 		EPRRewards.click();
-//		tokenType.sendKeys(Keys.ARROW_DOWN);
-//		Thread.sleep(2000);
-//		tokenType.sendKeys((Keys.ENTER));
-//		Thread.sleep(2000);
 		tokenType.sendKeys((Keys.ENTER));
 	}
 	private void clickSendTokenTransferBtn(){
@@ -441,14 +434,16 @@ public void refresh() {
 		wait.until(ExpectedConditions.elementToBeClickable(phone));
 		//phone.click();
 		phone.clear();
+		Thread.sleep(60000);
 		phone.sendKeys(pNumber);
+		Thread.sleep(60000);
 		clickSpecificMember();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		wait.until(ExpectedConditions.elementToBeClickable(edit));
 		edit.click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		clickBonusEligible();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		saveButton.click();
 	}
 	

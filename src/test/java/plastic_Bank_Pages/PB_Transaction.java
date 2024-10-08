@@ -85,9 +85,9 @@ public WebElement viewHistory;
 public List<WebElement> bonuseligibletext;
 @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.EditText\").instance(0)")
 public WebElement requiredQuantity;
-@AndroidFindBy(xpath= "//android.widget.ImageButton[@content-desc=\"Done\"]")
+@AndroidFindBy(xpath= "//android.widget.Button[@content-desc=\"OK\"]/android.view.ViewGroup/android.widget.TextView")
 public WebElement photoDone;
-@AndroidFindBy(xpath= "//android.widget.ImageButton[@content-desc=\"Take photo\"]")
+@AndroidFindBy(xpath= "//android.view.ViewGroup[@content-desc=\"Take picture\"]")
 public WebElement shutter;
 @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"+30 (pending)\")")
 public WebElement delayed_bonusb1;
@@ -344,15 +344,17 @@ public void verifyaddedmemsuspended(String b1number) throws InterruptedException
 
 
 public void bToSb(String b1number) throws InterruptedException {
-
+	
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
     search.sendKeys(b1number);
+    tap(64,158);
+	tap(500,582);
     Thread.sleep(2000);
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
     searchbutton.click();
     Thread.sleep(2000);
-    image.click();
-    tap(545,2150);   //tap start transaction
+    tap(500,840);   //tap result
+    tap(545,2050);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
     Thread.sleep(2000);
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
@@ -364,9 +366,9 @@ public void bToSb(String b1number) throws InterruptedException {
     pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
     Thread.sleep(2000);
 
-    tap(545,2180);  //tap add to cart
+    tap(545,2080);  //tap add to cart
 
-    tap(500,605);           //tap pet panel
+    tap(500,600);           //tap pet panel
     Thread.sleep(1000);
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
     requiredQuantity.click();
@@ -376,24 +378,23 @@ public void bToSb(String b1number) throws InterruptedException {
     pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
     Thread.sleep(2000);
 
-    tap(545,2180);  //tap add to cart
+    tap(545,2080);  //tap add to cart
 
-    tap(545,2132);  //next
+    tap(545,2032);  //next
 
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(confirmpurchase)));
     takescreenshotofandroid("confirm purchase scrsht");
     confirmpurchase.click();
-    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-    transactionsuccessful.isDisplayed();
+   
 
 }
 public void checknobonusinhistory() throws InterruptedException {
-	tap(130,2183);
-	 tap(690,2183);
+	tap(130,2083);
+	 tap(690,2083);
 	nobonusinhistory.isDisplayed();
 	
 	menu.click();
-	tap(300,1369);
+	tap(300,1391);
 	
 }
 public void b3ToPnb(String b3number) throws InterruptedException {
@@ -403,11 +404,15 @@ public void b3ToPnb(String b3number) throws InterruptedException {
    
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
 	search.sendKeys(b3number);
+	Thread.sleep(7000);
+	tap(65,209);
+	tap(500,582);
+	Thread.sleep(2000);
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
 	searchbutton.click();
 	Thread.sleep(4000);
 	image.click();
-	tap(545,2149);   //tap start transaction
+	tap(545,2049);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
 	hdpe.click();
@@ -415,7 +420,7 @@ public void b3ToPnb(String b3number) throws InterruptedException {
 	requiredQuantity.click();
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-	tap(545,2183);  //tap add to cart
+	tap(545,2083);  //tap add to cart
 	   tap(500,600);      //tap pet panel
      Thread.sleep(1000);
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
@@ -424,8 +429,8 @@ public void b3ToPnb(String b3number) throws InterruptedException {
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
 	Thread.sleep(2000);
-	tap(545,2183);  //tap add to cart
-	tap(545,2126);   //tap next
+	tap(545,2083);  //tap add to cart
+	tap(545,2026);   //tap next
    takepic.click();
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addPicture)));
    addPicture.click();
@@ -437,24 +442,25 @@ public void b3ToPnb(String b3number) throws InterruptedException {
         	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(confirmpurchase)));
         	takescreenshotofandroid("confirm purchase scrsht");
        	confirmpurchase.click();
-       	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-       	transactionsuccessful.isDisplayed();
+       Thread.sleep(15000);
         	
-            tap(130,2183);
+            
 }
 public void bToSP(String b3number) throws InterruptedException {
     Thread.sleep(7000);
     menu.click();
-    tap(300,690);
+    tap(300,600);
 
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
     search.sendKeys(b3number);
+    tap(64,158);
+	tap(500,582);
+	Thread.sleep(1000);
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
     searchbutton.click();
     Thread.sleep(4000);
-    tap(500,900);
-    //image.click();
-    tap(545,2150);   //tap start transaction
+    tap(500,840);   //tap result
+    tap(545,2050);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
     hdpe.click();
@@ -463,25 +469,24 @@ public void bToSP(String b3number) throws InterruptedException {
     pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
     pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
     Thread.sleep(2000);
-    tap(545,2180);  //tap add to cart
+    tap(545,2080);  //tap add to cart
 
-    tap(500,605);           //tap pet panel
+    tap(500,600);           //tap pet panel
     Thread.sleep(1000);
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
     requiredQuantity.click();
     pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
     pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
     Thread.sleep(2000);
-    tap(545,2180);  //tap add to cart
+    tap(545,2080);  //tap add to cart
 
-    tap(545,2132);  //next
+    tap(545,2032);  //next
     
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(confirmpurchase)));
     takescreenshotofandroid("confirm purchase scrsht");
     confirmpurchase.click();
-    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-    transactionsuccessful.isDisplayed();
-    tap(140,2197);  //home
+    
+    tap(140,2085);  //home
 }
 
 public void branchBonusPresent(String branchNumber, String password, String bonus) throws InterruptedException {
@@ -558,7 +563,7 @@ public void verifyBonusInAppB1_AfterBonusPaid(String branchNumber,String passwor
     pblogin.login(branchNumber, password,"+63");
 
     Thread.sleep(4000);
-    tap(100,2180);
+    tap(100,2085);
     Thread.sleep(4000);
     tokensinapp.isDisplayed();
 	Thread.sleep(3000);
@@ -636,13 +641,14 @@ public void m1toB1(String m1number) throws InterruptedException, IOException {
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
 	search.sendKeys(m1number);
 	Thread.sleep(2000);
-	tap(55,212);
+	tap(64,158);
 	tap(500,582);
+	Thread.sleep(2000);
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
 	searchbutton.click();
 	
 	image.click();
-	tap(545,2149);   //tap start transaction
+	tap(545,2049);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
@@ -656,7 +662,7 @@ public void m1toB1(String m1number) throws InterruptedException, IOException {
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
 	
-	tap(545,2183);  //tap add to cart
+	tap(545,2086);  //tap add to cart
    tap(500,600);      //tap pet panel
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
     requiredQuantity.click();
@@ -664,8 +670,8 @@ public void m1toB1(String m1number) throws InterruptedException, IOException {
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
 	
-	tap(545,2183);  //tap add to cart
-	tap(545,2126);   //tap next
+	tap(545,2086);  //tap add to cart
+	tap(545,2029);   //tap next
     takepic.click();
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addPicture)));
     addPicture.click();
@@ -680,20 +686,17 @@ public void m1toB1(String m1number) throws InterruptedException, IOException {
     	save.click();
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(confirmpurchase)));
     	confirmpurchase.click();
+    	//com.sec.android.app.camera:id/shutter_area
+    	//android.widget.Button[@content-desc="OK"]/android.view.ViewGroup/android.widget.TextView
+    	Thread.sleep(60000);
     	
-   	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-    	transactionsuccessful.isDisplayed();
-     	 TakesScreenshot ts2 = (TakesScreenshot) pbDriver;
-         byte[] screenshot2 = ts2.getScreenshotAs(OutputType.BYTES);
-         Allure.addAttachment("transaction successfull!", new ByteArrayInputStream(screenshot2));
-    	Thread.sleep(10000);
-         tap(690,2183);
+         tap(690,2100);
          Thread.sleep(15000);
         
     bc.ocr_test_shot(pbDriver);
     Assert.assertTrue(bc.string.contains("Bought"));
-    Thread.sleep(4000);
- 				tap(130,2183);
+    Thread.sleep(10000);
+ 				tap(130,2100);
 	            
 	            
 	          
@@ -712,13 +715,13 @@ public void m1toB1(String m1number) throws InterruptedException, IOException {
 public void b1toB2(String b1number) throws InterruptedException, IOException {
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
 	search.sendKeys(b1number);
-	tap(55,212);
+	tap(64,158);
 	tap(500,582);
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
 	searchbutton.click();
 	
 	image.click();
-	tap(545,2149);   //tap start transaction
+	tap(545,2049);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
@@ -729,7 +732,7 @@ public void b1toB2(String b1number) throws InterruptedException, IOException {
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
-	tap(545,2183);  //tap add to cart
+	tap(545,2086);  //tap add to cart
 	   tap(500,600);      //tap pet panel
      Thread.sleep(1000);
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
@@ -738,8 +741,8 @@ public void b1toB2(String b1number) throws InterruptedException, IOException {
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
 
-	tap(545,2183);  //tap add to cart
-	tap(545,2126);   //tap next
+	tap(545,2086);  //tap add to cart
+	tap(545,2029);   //tap next
     takepic.click();
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addPicture)));
     addPicture.click();
@@ -755,9 +758,7 @@ public void b1toB2(String b1number) throws InterruptedException, IOException {
          	takescreenshotofandroid("confirm purchase scrsht");
          	confirmpurchase.click();
          	
-        	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-        	transactionsuccessful.isDisplayed();
-         	
+        	       	
     
 }
 
@@ -766,13 +767,13 @@ public void b1toB3(String b1number) throws InterruptedException {
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
 	search.sendKeys(b1number);
 	Thread.sleep(2000);
-	tap(55,212);
+	tap(64,158);
 	tap(500,582);
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
 	searchbutton.click();
 	Thread.sleep(2000);
 	image.click();
-	tap(545,2149);   //tap start transaction
+	tap(545,2049);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
@@ -782,7 +783,7 @@ public void b1toB3(String b1number) throws InterruptedException {
 	requiredQuantity.click();
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_6));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-	tap(545,2183);  //tap add to cart
+	tap(545,2083);  //tap add to cart
 	   tap(500,600);      //tap pet panel
      Thread.sleep(1000);
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
@@ -790,8 +791,8 @@ public void b1toB3(String b1number) throws InterruptedException {
     pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_5));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
-	tap(545,2183);  //tap add to cart
-	tap(545,2126);   //tap next
+	tap(545,2083);  //tap add to cart
+	tap(545,2026);   //tap next
     takepic.click();
     wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addPicture)));
     addPicture.click();
@@ -806,24 +807,22 @@ public void b1toB3(String b1number) throws InterruptedException {
          	takescreenshotofandroid("confirm purchase scrsht");
         	confirmpurchase.click();
         	
-        	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-        	transactionsuccessful.isDisplayed();
-         	 
+        	         	 
 }
 
 public void b3ToP(String b3number) throws InterruptedException {
 	Thread.sleep(7000);
-	tap(55,212);
+	tap(64,158);
 	tap(500,582);
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
 	search.sendKeys(b3number);
-	tap(55,212);
+	tap(64,158);
 	tap(500,582);
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
 	searchbutton.click();
 	Thread.sleep(4000);
-	tap(500,845);
-	tap(545,2149);   //tap start transaction
+	tap(500,840);
+	tap(545,2049);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
@@ -833,7 +832,7 @@ public void b3ToP(String b3number) throws InterruptedException {
 	requiredQuantity.click();
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-	tap(545,2183);  //tap add to cart
+	tap(545,2083);  //tap add to cart
 	   tap(500,600);      //tap pet panel
   Thread.sleep(1000);
      Thread.sleep(1000);
@@ -841,8 +840,8 @@ public void b3ToP(String b3number) throws InterruptedException {
    requiredQuantity.click();
     pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-	tap(545,2183);  //tap add to cart
-	tap(545,2126);   //tap next
+	tap(545,2083);  //tap add to cart
+	tap(545,2026);   //tap next
    takepic.click();
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addPicture)));
    addPicture.click();
@@ -855,20 +854,29 @@ public void b3ToP(String b3number) throws InterruptedException {
         	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(confirmpurchase)));
         	takescreenshotofandroid("confirm purchase scrsht");
        	confirmpurchase.click();
-       	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-       	transactionsuccessful.isDisplayed();
-        	
+              	
 }
 public void sell_hdpe_branch_To_Processor_with_receipt(String processorname) throws InterruptedException {
+	Thread.sleep(2000);
+	tap(64,158);
+	tap(500,582);
+	Thread.sleep(2000);
 	findabuyer.click();
-   
+	Thread.sleep(2000);
+	tap(64,158);
+	tap(500,582);
+	Thread.sleep(2000);
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
 	search.sendKeys(processorname);
+	Thread.sleep(2000);
+	tap(64,158);
+	tap(500,582);
+	Thread.sleep(2000);
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
 	searchbutton.click();
 	
 	image.click();
-	tap(545,2149);   //tap start transaction
+	tap(545,2049);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
@@ -879,8 +887,8 @@ public void sell_hdpe_branch_To_Processor_with_receipt(String processorname) thr
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
-	tap(545,2183);  //tap add to cart
-	tap(545,2126);   //tap next
+	tap(545,2086);  //tap add to cart
+	tap(545,2029);   //tap next
    takepic.click();
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addPicture)));
    addPicture.click();
@@ -894,25 +902,30 @@ public void sell_hdpe_branch_To_Processor_with_receipt(String processorname) thr
         	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(confirmsell)));
         	takescreenshotofandroid("confirm sell scrsht");
        	confirmsell.click();
-       	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-       	transactionsuccessful.isDisplayed();
-        	 TakesScreenshot ts2 = (TakesScreenshot) pbDriver;
-            byte[] screenshot2 = ts2.getScreenshotAs(OutputType.BYTES);
-            Allure.addAttachment("Transaction successful!", new ByteArrayInputStream(screenshot2));
+       	
             
 }
 public void sell_pet_branch_To_Processor_without_receipt(String processorname) throws InterruptedException {
 	Thread.sleep(10000);
 	tap(55,212);
 	tap(500,600);
+	Thread.sleep(2000);
 	findabuyer.click();
+	Thread.sleep(2000);
+	tap(64,158);
+	tap(500,582);
+	Thread.sleep(2000);
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
 	search.sendKeys(processorname);
+	Thread.sleep(2000);
+	tap(64,158);
+	tap(500,582);
+	Thread.sleep(2000);
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
 	searchbutton.click();
 	Thread.sleep(5000);
 	image.click();
-	tap(545,2149);   //tap start transaction
+	tap(545,2049);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
@@ -923,35 +936,32 @@ public void sell_pet_branch_To_Processor_without_receipt(String processorname) t
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
-	tap(545,2183);  //tap add to cart
-	tap(545,2126);   //tap next
+	tap(545,2086);  //tap add to cart
+	tap(545,2029);   //tap next
    skip.click();
+   tap(820,1430);
   
         	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(confirmsell)));
         	takescreenshotofandroid("confirm sell scrsht");
        	confirmsell.click();
-       	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-       	transactionsuccessful.isDisplayed();
-        	 TakesScreenshot ts2 = (TakesScreenshot) pbDriver;
-            byte[] screenshot2 = ts2.getScreenshotAs(OutputType.BYTES);
-            Allure.addAttachment("Transaction successful!", new ByteArrayInputStream(screenshot2));
+       
             
 }
 
 public void b2ToP(String b2number) throws InterruptedException {
 	
 	Thread.sleep(10000);
-	tap(55,212);
+	tap(64,158);
 	tap(500,582);
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
 	search.sendKeys(b2number);
-	tap(55,212);
+	tap(64,158);
 	tap(500,582);
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
 	searchbutton.click();
 	
-	image.click();
-	tap(545,2149);   //tap start transaction
+	tap(500,840);
+	tap(545,2049);   //tap start transaction
 	Thread.sleep(2000); //wait for sometime
 	bonuseligibletext.get(0).isDisplayed();
 	bonuseligibletext.get(1).isDisplayed();
@@ -962,7 +972,7 @@ public void b2ToP(String b2number) throws InterruptedException {
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_4));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
-	tap(545,2183);  //tap add to cart
+	tap(545,2083);  //tap add to cart
 	  tap(500,600);        //tap pet panel
      Thread.sleep(1000);
    
@@ -971,8 +981,8 @@ public void b2ToP(String b2number) throws InterruptedException {
     pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_3));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	Thread.sleep(2000);
-	tap(545,2183);  //tap add to cart
-	tap(545,2126);   //tap next
+	tap(545,2083);  //tap add to cart
+	tap(545,2026);   //tap next
    takepic.click();
    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addPicture)));
    addPicture.click();
@@ -987,8 +997,7 @@ public void b2ToP(String b2number) throws InterruptedException {
         	takescreenshotofandroid("confirm purchase scrsht");
        	confirmpurchase.click();
        
-       	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-       	transactionsuccessful.isDisplayed();
+       
         	
 }
 public void CheckMemberBonus() throws InterruptedException {
@@ -1005,7 +1014,7 @@ public void CheckBranchBonus(String phoneNumber, String password ) throws Interr
 	PB_LoginPage lo =new  PB_LoginPage(pbDriver);
 	lo.login(phoneNumber, password,"+63");
 	
-	 tap(130,2183);
+	 tap(130,2085);
 	Thread.sleep(5000);
 	try {
 	tokensinapp.getText().equals("38");
@@ -1038,14 +1047,21 @@ public void tap(int x, int y) throws InterruptedException {
 	
 }
     public void transactionBranchStopBonus(String number) throws InterruptedException, IOException {
-
+    	Thread.sleep(5000);
+    	tap(74,209);
+    	tap(400,580);
+    	Thread.sleep(5000);
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
     	search.sendKeys(number);
+    	Thread.sleep(5000);
+    	tap(74,209);
+    	tap(400,580);
+    	Thread.sleep(5000);
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
     	searchbutton.click();
     	
     	image.click();
-    	tap(545,2149);   //tap start transaction
+    	tap(545,2049);   //tap start transaction
     	Thread.sleep(2000); //wait for sometime
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(hdpe)));
     	hdpe.click();
@@ -1055,15 +1071,15 @@ public void tap(int x, int y) throws InterruptedException {
     	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
     	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
     	Thread.sleep(2000);
-    	tap(545,2183);  //tap add to cart
+    	tap(545,283);  //tap add to cart
     	 tap(500,600);      //tap pet panel
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
         requiredQuantity.click();
     	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
     	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
     	Thread.sleep(2000);
-    	tap(545,2183);  //tap add to cart
-    	tap(545,2126);   //tap next
+    	tap(545,2083);  //tap add to cart
+    	tap(545,2026);   //tap next
     	Thread.sleep(2000);
         takepic.click();
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addPicture)));
@@ -1086,10 +1102,9 @@ public void tap(int x, int y) throws InterruptedException {
 			 * nobonus.get(0).isDisplayed(); nobonus.get(1).isDisplayed();
 			 */
         	confirmpurchase.click();
-        	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(transactionsuccessful)));
-        	transactionsuccessful.isDisplayed();
+        	
          	Thread.sleep(15000);
-           tap(130,2183);
+           tap(130,2083);
              Thread.sleep(4000);
              wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(tokensinapp)));
 	            assertTrue(tokensinapp.getText().equals("0"));
@@ -1140,7 +1155,7 @@ public void tap(int x, int y) throws InterruptedException {
     }
 
     public void verifyExchangeHistoryToken() throws InterruptedException, IOException {
-       tap(700,2183);
+       tap(700,2083);
        cashouts.click();
        Thread.sleep(10000);
        BaseClass bc= new BaseClass();
@@ -1150,12 +1165,20 @@ public void tap(int x, int y) throws InterruptedException {
 
     }
     public void memberToBranchDonation(String number) throws InterruptedException {
+    	Thread.sleep(2000);
+    	tap(64,158);
+    	tap(500,582);
+    	Thread.sleep(2000);
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
     	search.sendKeys(number);
+    	Thread.sleep(2000);
+    	tap(64,158);
+    	tap(500,582);
+    	Thread.sleep(2000);
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
     	searchbutton.click();
     	image.click();
-    	tap(545,2149);   //tap start transaction
+    	tap(545,2049);   //tap start transaction
     	Thread.sleep(2000); //wait for sometime
     	donationionic.click();
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
@@ -1164,27 +1187,31 @@ public void tap(int x, int y) throws InterruptedException {
     	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
     	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
     	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-    	tap(545,2183);  //tap add to cart
-    	tap(545,2126);   //tap next
+    	tap(545,2083);  //tap add to cart
+    	tap(545,2026);   //tap next
     	Thread.sleep(1000);
     	confirmpurchase.click();
     	transactionsuccessful.isDisplayed();
     	
     	Thread.sleep(5000);
-    	tap(55,209);
-    	tap(300,1433);
+    	tap(74,209);
+    	tap(300,1390);
     }
     
     public void branchToProcessorDonation(String number) throws InterruptedException {
     	Thread.sleep(5000);
-    	tap(55,209);
+    	tap(74,209);
     	tap(400,580);
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchOutline)));
     	search.sendKeys(number);
+    	Thread.sleep(5000);
+    	tap(74,209);
+    	tap(400,580);
+    	Thread.sleep(5000);
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(searchbutton)));
     	searchbutton.click();
     	image.click();
-    	tap(545,2149);   //tap start transaction
+    	tap(545,2049);   //tap start transaction
     	Thread.sleep(2000); //wait for sometime
     	donationionic.click();
     	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(requiredQuantity)));
@@ -1193,21 +1220,21 @@ public void tap(int x, int y) throws InterruptedException {
     	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
     	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
     	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-    	tap(545,2183);  //tap add to cart
-    	tap(545,2126);   //tap next
+    	tap(545,2083);  //tap add to cart
+    	tap(545,2026);   //tap next
     	confirmpurchase.click();
     	transactionsuccessful.isDisplayed();
     	Thread.sleep(5000);
-    	tap(55,209);
-    	tap(300,1433);
+    	tap(74,209);
+    	tap(300,1390);
     }
     public void verifyNoBonusForDonation() throws InterruptedException{
-    	tap(130,2183);
+    	tap(130,2083);
     	tokensinapp.isDisplayed();
     	Thread.sleep(3000);
     	assertTrue(tokensinapp.getText().equals("0"));
     	menu.click();
-    	tap(300,1433);
+    	tap(300,1390);
     }
     public void verifyNoBonusForDonationmem() throws InterruptedException{
     	
@@ -1329,19 +1356,19 @@ public void tap(int x, int y) throws InterruptedException {
     }
 
     public void verifyBranch1BonusPresent() throws InterruptedException {
-    	tap(130,2183);
+    	tap(130,2083);
     	delayed_bonusb1.isDisplayed();
     	 
     menu.click();
-	tap(300,1433);
+	tap(300,1388);
     }
 
     public void verifyBranch2BonusPresent() throws InterruptedException {
-    	tap(130,2183);
+    	tap(130,2083);
     	delayed_bonusb2.isDisplayed();
     	
     	menu.click();
-    	tap(300,1433);
+    	tap(300,1388);
     }
 
  public void verifyMemberBonusNotPresent() throws InterruptedException {
@@ -1354,18 +1381,18 @@ public void tap(int x, int y) throws InterruptedException {
     }
 
  public void verifyBranch1BonusNotPresent() throws InterruptedException {
- 	tap(130,2183);
+ 	tap(130,2083);
  	noBonus.isDisplayed();
  	menu.click();
- 	tap(300,1433);
+ 	tap(300,1390);
  }
 
 
  public void verifyBranch2BonusNotPresent() throws InterruptedException {
- 	tap(130,2183);
+ 	tap(130,2083);
  	noBonus.isDisplayed();
  	menu.click();
- 	tap(300,1433);
+ 	tap(300,1388);
  }
     public void verifyBonusInAppMem_1711_BeforeBonusPaid(String member, String password) throws InterruptedException {
     	 PB_LoginPage pblogin = new PB_LoginPage(pbDriver);

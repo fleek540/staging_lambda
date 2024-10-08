@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
-
+import org.openqa.selenium.JavascriptExecutor;
 import io.qameta.allure.Allure;
 import static org.bytedeco.javacpp.lept.pixDestroy;
 import static org.bytedeco.javacpp.lept.pixRead;
@@ -51,7 +51,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 @SuppressWarnings("deprecation")
 public class BaseClass {
-		
+	public static boolean teststatus=false;
 	public String string;
 	public static String benefitordername;
 	public static String androidbenefitname;
@@ -160,8 +160,8 @@ public static boolean gojekyn;
     // Format the date as a string
     public static String formattedDate = now.format(formatter);
 
-	public static String temp= "qa-admin.cognitionfoundry.io";
-	public static String actual = "qa-admin.cognitionfoundry.io";
+	public static String temp= "staging-admin.plasticbank.com";
+	public static String actual = "staging-admin.plasticbank.com";
 	 public String username = "ashish.rawatfleekitsolutions";
 	    public String accesskey = "MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2";
 	    public static final String URL = "";
@@ -181,7 +181,7 @@ public static boolean gojekyn;
 		ltOptions1.put("username", "ashish.rawatfleekitsolutions");
 		ltOptions1.put("accessKey", "MWAa6go8FynMFZt5GYZyeKtSycfc6I2YKQhFn1PH2h1Tw6Syo2");
 		ltOptions1.put("project", "Plastic Bank");
-		ltOptions1.put("build", "Alchemy tests QA"+" "+formattedDate);
+		ltOptions1.put("build", "Alchemy tests STG samsungUltraS24"+" "+formattedDate);
 		ltOptions1.put("idleTimeout","1700");
 		ltOptions1.put("name", testName);
 		ltOptions1.put("selenium_version", "4.13.0");
@@ -196,7 +196,7 @@ public static boolean gojekyn;
 		  wait300 = new WebDriverWait(alcDriver,Duration.ofSeconds(300)); 
 		  wait2s = new WebDriverWait(alcDriver,Duration.ofSeconds(2)); 
 		  waitms = new WebDriverWait(alcDriver,Duration.ofMillis(100));
-		  alcDriver.get("https://qa-admin.cognitionfoundry.io/#/login");
+		  alcDriver.get("https://staging-admin.plasticbank.com/#/login");
 		  
 		 
 		
@@ -204,13 +204,15 @@ public static boolean gojekyn;
 		  HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 		  ltOptions.put("w3c", true);
 		  ltOptions.put("platformName", "android");
-		  ltOptions.put("deviceName", "Pixel 8");
+		  ltOptions.put("deviceName", "Galaxy S24 Ultra");
 		  ltOptions.put("platformVersion", "14");
-		  ltOptions.put("build", "PBAPP tests QA 24062024"+" "+formattedDate);
+		  ltOptions.put("build", "PBAPP tests STG SamsungUltraS24 "+" "+formattedDate);
 		  ltOptions.put("idleTimeout","1700");
 		  ltOptions.put("name", testName);
+		  ltOptions.put("locationServicesEnabled", false);
+		  ltOptions.put("locationServicesAuthorized", false);
 		  ltOptions.put("isRealMobile", true);
-		  ltOptions.put("app", "lt://APP10160361821724247841523904");
+		  ltOptions.put("app", "lt://APP10160361361728307289843739");
 		  ltOptions.put("deviceOrientation", "PORTRAIT");
 		  
 		  capabilities.setCapability("lt:options", ltOptions);
@@ -219,7 +221,7 @@ public static boolean gojekyn;
 	  
 			  
 			 
-			  pbDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS); wait10 =
+			  pbDriver.manage().timeouts().implicitlyWait(600, TimeUnit.SECONDS); wait10 =
 			  new WebDriverWait(pbDriver,Duration.ofSeconds(10)); wait3 = new
 			  WebDriverWait(pbDriver,Duration.ofSeconds(3)); wait30 = new
 			  WebDriverWait(pbDriver,Duration.ofSeconds(30)); wait200 = new
@@ -240,7 +242,21 @@ public static boolean gojekyn;
 		  branchName = randomBusinessName;       
 		 
 	}
+	@AfterMethod
+	 public void mark_test_status() {
+		 if(teststatus==true) {
+		        
+		        ((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
+		        ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
 
+		        teststatus=false;
+		        
+		        }
+		        else{
+		        	((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
+				((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
+			}
+	 }
 	
 	
 	  public void tap(int x, int y) throws InterruptedException {

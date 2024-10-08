@@ -62,7 +62,7 @@ public PB_Menu_Options(AndroidDriver pBriver) {
     }
 	public void changepw() throws InterruptedException {
 		menu.click();
-		tap(300,1117);
+		tap(300,1047);
 		changepw.click();
 		textfields.get(0).sendKeys("123456a");
 		textfields.get(1).sendKeys("123456ab");

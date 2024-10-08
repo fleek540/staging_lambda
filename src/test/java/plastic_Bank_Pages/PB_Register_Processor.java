@@ -62,9 +62,9 @@ public WebElement createBUSINESSbutton;
 public WebElement cameraButton;
 @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Take a picture\")")
 public WebElement takeA_PictureOption;
-@AndroidFindBy(xpath= "//android.widget.ImageButton[@content-desc=\"Take photo\"]")
+@AndroidFindBy(xpath= "//android.view.ViewGroup[@content-desc=\"Take picture\"]")
 public WebElement shutter;
-@AndroidFindBy(xpath= "//android.widget.ImageButton[@content-desc=\"Done\"]")
+@AndroidFindBy(xpath= "//android.widget.Button[@content-desc=\"OK\"]/android.view.ViewGroup/android.widget.TextView")
 public WebElement photoDone;
 @AndroidFindBy(uiAutomator = "new UiSelector().text(\"confirm\")")
 public WebElement confirmButton;
@@ -163,7 +163,7 @@ WebDriverWait wait = new WebDriverWait(pbDriver,Duration.ofSeconds(30));
 public void createprocessoraftermember() throws InterruptedException {
 	 wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(menuButton)));
 	    menuButton.click();
-	    tap(373,862);
+	    tap(373,780);
 	    Thread.sleep(2000);
 	    recyclingbusiness.click();
 	    Thread.sleep(2000);
@@ -174,19 +174,19 @@ public void createprocessoraftermember() throws InterruptedException {
 	    linkaccount.click();
 	    Thread.sleep(2000);
 	    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(dothislater)));
-	    tap(537,2126);
-	    tap(984,1305);
-	    tap(440,1792);
+	    tap(537,2037);
+	    tap(971,1331);
+	    tap(440,1672);
 	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
 	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 		pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	    
 	    
-	    tap(551,2120);
-	    tap(550,2132);
+		 tap(551,2026);
+		    tap(550,2046);
 	    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(addnewmaterial)));
 	   menuButton.click();
-	   tap(330,1433);	    
+	   tap(330,1390);	    
 }
 
 public String typeRandomAlphabet() {
@@ -242,41 +242,41 @@ public void createprocessordirectly() throws InterruptedException {
 	Thread.sleep(2000);
 	image.click();
 	Thread.sleep(2000);
-	tap(550,1988);
+	tap(550,2024);
 	shutter.click();
 	photoDone.click();
-	tap(550,2022);
+	tap(550,2054);
 	//
-	tap(500,860);
+	tap(500,786);
 	 typedAlphabets = "mainak "+getTypedAlphabets();
 	    System.out.println("Typed alphabets: " + typedAlphabets);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	
-	tap(200,1000);
+	tap(200,1012);
 	Thread.sleep(3000);
 	searchcountries.sendKeys("+63");
 	tap(270,466);
-	tap(660,1000);
+	tap(660,1012);
 	 typedNumber = getTypedNumber();
 	    System.out.println("Typed number: " + typedNumber);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	edittexts.get(3).click();
 	
-	scroll(718,1024,718,1800);
-	scroll(718,1024,718,1800);
+	scroll(830,910,830,1280);
+	scroll(830,910,830,1280);
 	
 	done.click();
-	tap(400,1440);
-	tap(140,900);
+	tap(400,1470);
+	tap(140,911);
 	scroll(500,2100,500,1555);
 	edittexts.get(4).sendKeys("123456a");
 	edittexts.get(5).sendKeys("123456a");
 	scroll(500,2100,500,555);
 	edittexts.get(2).sendKeys("Gayas "+RandomStringUtils.randomAlphabetic(5));
 	tickimage.click();
-	tap(540,2020);
+	tap(540,2054);
 	wait300.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(resend)));
-	tap(156,1080);
+	tap(156,1030);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));
@@ -284,18 +284,18 @@ public void createprocessordirectly() throws InterruptedException {
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(savematerial)));
-	 tap(975,1315);
-	 tap(440,1650);
-	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
-	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
+	 tap(970,1331);
+	 tap(440,1666);
+	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
+	    pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 		pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	    
 	    
-	    tap(551,2000);
+		 tap(551,2020);
 	    savematerial.click();
 	    wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(kg)));
 	   menuButton.click();
-	   tap(330,1369);	    
+	   tap(330,1390);	    
 }
 
 

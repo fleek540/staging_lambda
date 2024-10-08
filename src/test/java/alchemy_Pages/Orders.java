@@ -1565,9 +1565,9 @@ public class Orders extends BaseClass{
         closeBtnPopup.click();
     }
     private void clickOrdersTransferTab() throws InterruptedException {
-        Thread.sleep(5000);
+       waitforloader();
         ordersTab_transfer.click();
-        Thread.sleep(15000);
+        waitforloader();
     }
     private String verifySenderName(){
         return table_firstRowData.get(1).getText();

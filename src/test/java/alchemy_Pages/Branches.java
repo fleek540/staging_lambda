@@ -469,7 +469,7 @@ public void splitBranchVerify(String pNum) throws InterruptedException {
 
 	Thread.sleep(3000);
 
-	Set<String> expectedTransactionsDetails = new HashSet<>(Arrays.asList(" Bought 75 KG from "+PB_Register_CollectionPoint.splitBranchMemberName1+" "," Bought 75 KG from "+PB_Register_CollectionPoint.splitMemberName2+" "," Sold 150 KG to "+Data.branch1_Name4358+" "));
+	Set<String> expectedTransactionsDetails = new HashSet<>(Arrays.asList(" Bought 75 KG from "+PB_Register_CollectionPoint.splitBranchMemberName1+" "," Bought 75 KG from "+PB_Register_CollectionPoint.splitMemberName1+" "," Sold 150 KG to "+Data.branch1_Name4358+" "));
 
 	Set<String> actualTransactionsDetails = new HashSet<>();
 
@@ -484,7 +484,7 @@ public void splitBranchVerify(String pNum) throws InterruptedException {
 
 	System.out.println(actualTransactionsDetails);
 
-	System.out.println(" Bought 75 KG from "+PB_Register_CollectionPoint.splitBranchMemberName1+" "+" Bought 75 KG from "+PB_Register_CollectionPoint.splitMemberName2+" "+" Sold 150 KG to "+Data.branch1_Name4358+" ");
+	System.out.println(" Bought 75 KG from "+PB_Register_CollectionPoint.splitBranchMemberName1+" "+" Bought 75 KG from "+PB_Register_CollectionPoint.splitMemberName1+" "+" Sold 150 KG to "+Data.branch1_Name4358+" ");
 
 
 	Set<String> actualProcessed = preprocessSet(actualTransactionsDetails);
@@ -999,7 +999,8 @@ public void firstTransactionApproveExcHisB1(String pNum) throws InterruptedExcep
 		transactions.get(0).click();
 		Thread.sleep(2000);
 		String alcBonus= branchBonusTextInAlchmeyVerify.getText();
-		assertEquals(total_bonus_M_B1,alcBonus);
+		assertEquals(alcBonus,total_bonus_M_B1);
+		
 		String kgArr[] = {hdpeKgAlcText.getText(),petKgAlcText.getText(),totalKgAlcText.getText()};
 		assertEquals(kgArr,alc_M_B1_ExngHisKgVerify);
 		  Thread.sleep(2000);

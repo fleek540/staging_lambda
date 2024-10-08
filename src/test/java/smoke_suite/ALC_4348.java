@@ -13,18 +13,21 @@ import org.openqa.selenium.JavascriptExecutor;
 
 
 import Utilities.BaseClass;
+import Utilities.BaseClass2;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.qameta.allure.Description;
 import plastic_Bank_Pages.PB_LoginPage;
+import plastic_Bank_Pages.PB_LoginPage2;
 import plastic_Bank_Pages.PB_Register_Member;
+import plastic_Bank_Pages.PB_Register_Member2;
 
-public class ALC_4348 extends BaseClass{
+public class ALC_4348 extends BaseClass2{
 	@Test(priority = 0, description="User not able to sign up if he tries to sign up within 3 minutes of first sign up.")
 	@Description("User not able to sign up if he tries to sign up within 3 minutes of first sign up.")
 	public void verifyUserCanNot() throws InterruptedException {
-		try{
-		PB_Register_Member pbsignup= new PB_Register_Member(pbDriver);
+		
+		PB_Register_Member2 pbsignup= new PB_Register_Member2(pbDriver);
 		pbsignup.signUpCollector();
 		PB_LoginPage pb= new PB_LoginPage(pbDriver);
 		pb.logoutmem();
@@ -33,10 +36,10 @@ public class ALC_4348 extends BaseClass{
 		Thread.sleep(2000);
 		pbsignup.image.click();
 		Thread.sleep(2000);
-		tap(550,2120);
+		tap(550,2010);
 		pbsignup.shutter.click();
 		pbsignup.photoDone.click();
-		tap(550,2154);
+		tap(550,2054);
 		Thread.sleep(2000);
 		pbsignup.edittexts.get(1).sendKeys("Mainak "+RandomStringUtils.randomAlphabetic(5));
 		Thread.sleep(1000);
@@ -44,7 +47,7 @@ public class ALC_4348 extends BaseClass{
 		pbsignup.searchcountries.sendKeys("+63");
 		Thread.sleep(2500);
 		pbsignup.firstresult.click();
-		Thread.sleep(2500);
+		Thread.sleep(4000);
 		pbsignup.edittexts.get(3).click();
 		Thread.sleep(5000);
 		pbsignup.typeRandomDigit();
@@ -60,7 +63,7 @@ public class ALC_4348 extends BaseClass{
 		pbsignup.edittexts.get(4).click();
 		Thread.sleep(2000);
 		
-		scroll(780,990,780,1352);
+		scroll(820,905,820,1285);
 		Thread.sleep(4000);
 		pbsignup.done.click();
 		pbsignup.gender.click();
@@ -72,19 +75,14 @@ public class ALC_4348 extends BaseClass{
 		pbsignup.register.click();
 		
 		takescreenshotofandroid("Registration failed if tried within 3 minutes since previous registration");
-		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
-	        
-		}catch(Exception e) {
-			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
-	        
-		}	
+		teststatus=true;
 	}
 	
 	@Test(priority =1, description="User able to sign up again if he tries after 3 minute window.")
 	@Description("User able to sign up again if he tries after 3 minute window.")
 	public void verifyUserCanAfter3Min() throws InterruptedException {
-		try{
-		PB_Register_Member pbsignup= new PB_Register_Member(pbDriver);
+		
+		PB_Register_Member2 pbsignup= new PB_Register_Member2(pbDriver);
 		Thread.sleep(180000);
 		pbsignup.register.click();
 		WebDriverWait wait = new WebDriverWait(pbDriver,Duration.ofSeconds(300));
@@ -92,15 +90,10 @@ public class ALC_4348 extends BaseClass{
 		pbsignup.codesent.isDisplayed();
 		takescreenshotofandroid("Registration successful if tried after 3 minutes since previous registration");
 		
-		PB_LoginPage pb= new PB_LoginPage(pbDriver);
+		PB_LoginPage2 pb= new PB_LoginPage2(pbDriver);
 		Thread.sleep(5000);
 		pb.logoutmem();
-	 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
-	        
-		}catch(Exception e) {
-			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
-	        
-		}	
+		teststatus=true;	
 	}
 
 }

@@ -315,7 +315,9 @@ public void performDigitalCashOut() throws IOException, InterruptedException {
 	 * thousand.isDisplayed(); sixpoint48.isDisplayed(); idr.isDisplayed();
 	 */
 	yourcashoutinprogress.isDisplayed();
-	tap(550,2140);
+	tap(550,2040);
+	Thread.sleep(5000);
+	tap(560,1055);
 	Thread.sleep(5000);
 tokensinend=tokensinapp.getText();
 	
@@ -340,7 +342,7 @@ public void performDigitalCashOutBranch() throws IOException, InterruptedExcepti
 	System.out.println("toekn on cashout page"+tokensoncop);
 	
 	//assertTrue(tokensinbegining.equals(tokensoncop));
-	tap(500,1863);
+	tap(500,1925);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_3));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
@@ -349,7 +351,7 @@ public void performDigitalCashOutBranch() throws IOException, InterruptedExcepti
 	confirmcashout.click();
 	takescreenshotofandroid("Cash-Out fee is zero");
 	yourcashoutinprogress.isDisplayed();
-	tap(545,2140);
+	tap(545,2040);
 	
 	Thread.sleep(5000);
 	
@@ -376,7 +378,7 @@ public void performDigitalCashOutCollector() throws IOException, InterruptedExce
 	System.out.println("toekn on cashout page"+tokensoncop);
 	
 	//assertTrue(tokensinbegining.equals(tokensoncop));
-	tap(500,1857);
+	tap(500,1920);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_3));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
@@ -386,8 +388,7 @@ public void performDigitalCashOutCollector() throws IOException, InterruptedExce
 	
 	confirmcashout.click();
 	yourcashoutinprogress.isDisplayed();
-	tap(545,2130);
-	
+	tap(545,2040);
 	Thread.sleep(5000);
 	
 	
@@ -424,14 +425,14 @@ public void unlink() throws InterruptedException {
 	cashoutbtn.click();
 	Thread.sleep(5000);
 	unlink.click();
-	tap(500,2120);
+	tap(500,2024);
 	Thread.sleep(10000);
 	text.sendKeys("abc@mail.com");
 	image.click();
 	Thread.sleep(4000);
 	linkaccount.click();
 	codesent.isDisplayed();
-	tap(151,1190);
+	tap(151,1050);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));
@@ -439,9 +440,11 @@ public void unlink() throws InterruptedException {
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_9));
 	back.click();
+	
+	Thread.sleep(5000);
 	Thread.sleep(5000);
 	menu.click();
-	tap(300,1244);
+	tap(300,1186);
 }
 
 public void unlinkgcash4871() throws InterruptedException {
@@ -449,7 +452,7 @@ public void unlinkgcash4871() throws InterruptedException {
 	cbbtnbranch.click();
 	
 	unlink.click();
-	tap(500,2129);
+	tap(500,2029);
 	Thread.sleep(1000);
 	
 	image.click();
@@ -508,7 +511,7 @@ public void verifytokensarenotpresent() throws InterruptedException {
 }
 
 public void verifytokensarepresentbranch() throws InterruptedException {
-	tap(130,2183);
+	tap(130,2085);
 Thread.sleep(2000);
 	tokensinapp.isDisplayed();
 	assertTrue(tokensinapp.getText().equals("1000"));
@@ -530,8 +533,8 @@ public void verifytokensarepresentstore() throws InterruptedException {
 
 public void verifytokensarepresentprocessor() throws InterruptedException {
 	menu.click();
-	tap(400,630);
-	tap(130,2183);
+	tap(400,580);
+	tap(130,2083);
 	tokensinapp.isDisplayed();
 	assertTrue(tokensinapp.getText().equals("1000"));
 	
@@ -540,7 +543,7 @@ public void verifytokensarepresentprocessor() throws InterruptedException {
 
 public void verifytokensarenotpresentbranch() throws InterruptedException {
 	
-	tap(130,2183);
+	tap(130,2085);
 	Thread.sleep(2000);
 	assertFalse(tokensinapp.getText().equals("1000"));
 	takescreenshotofandroid("tokens in app not present after being reclaimed.");
@@ -568,8 +571,8 @@ public void verifytokensarenotpresentstore() throws InterruptedException {
 
 public void verifytokensarenotpresentprocessor() throws InterruptedException {
 	menu.click();
-	tap(400,630);
-	tap(130,2183);
+	tap(400,580);
+	tap(130,2083);
 	tokensinapp.isDisplayed();
 	assertFalse(tokensinapp.getText().equals("1000"));
 	

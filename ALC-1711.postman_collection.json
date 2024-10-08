@@ -2003,6 +2003,91 @@
 					},
 					"response": []
 				},
+                                {
+							"name": "Make Member Bonus Eligible",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Host",
+										"value": "{{HostName}}"
+									},
+									{
+										"key": "sec-ch-ua-platform",
+										"value": "\"Windows\""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{alchemytoken}}"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json, text/plain, */*"
+									},
+									{
+										"key": "sec-ch-ua",
+										"value": "\"Google Chrome\";v=\"129\", \"Not=A?Brand\";v=\"8\", \"Chromium\";v=\"129\""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "sec-ch-ua-mobile",
+										"value": "?0"
+									},
+									{
+										"key": "Origin",
+										"value": "{{BaseUrl}}"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-site"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "empty"
+									},
+									{
+										"key": "Referer",
+										"value": "{{BaseUrl}}/"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en-GB,en-US;q=0.9,en;q=0.8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"bonusEligible\":true}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BaseUrl}}/admin/user/{{m1id}}",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"{{m1id}}"
+									]
+								}
+							},
+							"response": []
+				},
 				{
 					"name": "Set Item bonus eligible for B1 Item 1",
 					"event": [
@@ -3980,12 +4065,12 @@
 	"variable": [
 		{
 			"key": "BaseUrl",
-			"value": "https://qapb.cognitionfoundry.io",
+			"value": "https://stagingpb.cognitionfoundry.io",
 			"type": "string"
 		},
 		{
 			"key": "HostName",
-			"value": "qapb.cognitionfoundry.io",
+			"value": "stagingpb.cognitionfoundry.io",
 			"type": "string"
 		}
 	]

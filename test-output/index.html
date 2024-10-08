@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Fleek\AppData\Local\Temp\testng-eclipse--79664270\testng-customsuite.xml</span>
+                    <span>C:\Users\Fleek\AppData\Local\Temp\testng-eclipse-964187282\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,  1 skipped,  3 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,24 +103,15 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="smoke_suite.ALC_258" class="method navigator-link" hash-for-method="selltoprocessor">selltoprocessor</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="smoke_suite.ALC_4956" class="method navigator-link" hash-for-method="changepassword">changepassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="smoke_suite.ALC_4956" class="method navigator-link" hash-for-method="loginWithNewPassword">loginWithNewPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Default_suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="smoke_suite.ALC_258" class="method navigator-link" hash-for-method="verifytransactions">verifytransactions</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -131,17 +122,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="smoke_suite.ALC_258" class="method navigator-link" hash-for-method="checkalchemy">checkalchemy</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="smoke_suite.ALC_258" class="method navigator-link" hash-for-method="createdata">createdata</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="smoke_suite.ALC_258" class="method navigator-link" hash-for-method="dotransactions">dotransactions</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="smoke_suite.ALC_4956" class="method navigator-link" hash-for-method="createmember">createmember</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -159,34 +140,26 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">smoke_suite.ALC_258</span>
+              <span class="class-name">smoke_suite.ALC_4956</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="selltoprocessor">
-                  </a> <!-- selltoprocessor -->
-                  <span class="method-name">selltoprocessor</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, executeScript {script=lambda-hook: {&quot;action&quot;: &quot;setTestStatus&quot;,&quot;arguments&quot;: {&quot;status&quot;:&quot;failed&quot;, &quot;remark&quot;:&quot;This is a failed test &quot;}} , args=[]}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
-	at smoke_suite.ALC_258.selltoprocessor(ALC_258.java:67)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+                  <a name="changepassword">
+                  </a> <!-- changepassword -->
+                  <span class="method-name">changepassword</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:74)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:43)
+	at plastic_Bank_Pages.PB_LoginPage.clickFinalLogin(PB_LoginPage.java:119)
+	at plastic_Bank_Pages.PB_LoginPage.login(PB_LoginPage.java:199)
+	at smoke_suite.ALC_4956.changepassword(ALC_4956.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
@@ -214,52 +187,28 @@ Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
 
 </div> <!-- stack-trace -->
                   <em>
-(Sell material 1 to processor with receipt and material 2 to processor without receipt.)                  </em>
+(Login with newly created member and change password in settings.)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
-          <div class="suite-Default_suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">smoke_suite.ALC_258</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifytransactions">
-                  </a> <!-- verifytransactions -->
-                  <span class="method-name">verifytransactions</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, screenshot {}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
-	at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
-	at Utilities.BaseClass.afterMethod(BaseClass.java:435)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+                  <a name="loginWithNewPassword">
+                  </a> <!-- loginWithNewPassword -->
+                  <span class="method-name">loginWithNewPassword</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:74)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:43)
+	at plastic_Bank_Pages.PB_LoginPage.clickFinalLogin(PB_LoginPage.java:119)
+	at plastic_Bank_Pages.PB_LoginPage.login(PB_LoginPage.java:199)
+	at smoke_suite.ALC_4956.loginWithNewPassword(ALC_4956.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
@@ -285,42 +234,24 @@ Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
 
 </div> <!-- stack-trace -->
                   <em>
-(Go to branch and processor one by one to check transaction details.)                  </em>
+(Login with new password)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-skipped -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">smoke_suite.ALC_258</span>
+              <span class="class-name">smoke_suite.ALC_4956</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="checkalchemy">
-                  </a> <!-- checkalchemy -->
-                  <span class="method-name">checkalchemy</span>
+                  <a name="createmember">
+                  </a> <!-- createmember -->
+                  <span class="method-name">createmember</span>
                   <em>
-(Go the branch and take note of branch details:- 1) KG recycled, 2) Active members, 3) Members Registered and 4) Tokens in wallet.)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createdata">
-                  </a> <!-- createdata -->
-                  <span class="method-name">createdata</span>
-                  <em>
-(Create a member, branch, processor and a bonus with the same branch and processor)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="dotransactions">
-                  </a> <!-- dotransactions -->
-                  <span class="method-name">dotransactions</span>
-                  <em>
-(Login into branch and buy materials from member)                  </em>
+(Create a valid member.)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -328,7 +259,7 @@ Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Fleek\AppData\Local\Temp\testng-eclipse--79664270\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Fleek\AppData\Local\Temp\testng-eclipse-964187282\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -337,7 +268,7 @@ Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;smoke_suite.ALC_258&quot;/&gt;
+      &lt;class name=&quot;smoke_suite.ALC_4956&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -377,32 +308,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'dotransactions')
-data.setCell(0, 2, 'smoke_suite.ALC_258')
-data.setCell(0, 3, 400103);
+data.setCell(0, 1, 'createmember')
+data.setCell(0, 2, 'smoke_suite.ALC_4956')
+data.setCell(0, 3, 7697);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createdata')
-data.setCell(1, 2, 'smoke_suite.ALC_258')
-data.setCell(1, 3, 46506);
+data.setCell(1, 1, 'loginWithNewPassword')
+data.setCell(1, 2, 'smoke_suite.ALC_4956')
+data.setCell(1, 3, 1366);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'selltoprocessor')
-data.setCell(2, 2, 'smoke_suite.ALC_258')
-data.setCell(2, 3, 30112);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'checkalchemy')
-data.setCell(3, 2, 'smoke_suite.ALC_258')
-data.setCell(3, 3, 29735);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifytransactions')
-data.setCell(4, 2, 'smoke_suite.ALC_258')
-data.setCell(4, 3, 0);
+data.setCell(2, 1, 'changepassword')
+data.setCell(2, 2, 'smoke_suite.ALC_4956')
+data.setCell(2, 3, 1200);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 minutes</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -428,102 +351,82 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">smoke_suite.ALC_258</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">smoke_suite.ALC_4956</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">generateAndroidBenefitname</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">generateBenefitName</span>
-                <span class="method-start">69 ms</span>
+                <span class="method-start">24 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">generateBenefitOrderName</span>
-                <span class="method-start">73 ms</span>
+                <span class="method-start">25 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">generateBonusName</span>
-                <span class="method-start">83 ms</span>
+                <span class="method-start">26 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">generateBranchMemberName</span>
-                <span class="method-start">85 ms</span>
+                <span class="method-start">27 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">generateBranchName</span>
-                <span class="method-start">87 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-suite before">
-                <span class="method-name">generateBrandName</span>
-                <span class="method-start">88 ms</span>
+                <span class="method-start">28 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">generateRandomBranchMemberNumber</span>
-                <span class="method-start">89 ms</span>
+                <span class="method-start">29 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-suite before">
+                <span class="method-name">generateBrandName</span>
+                <span class="method-start">29 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">generateRandomLastName</span>
-                <span class="method-start">92 ms</span>
+                <span class="method-start">30 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">generateRandomNumber</span>
-                <span class="method-start">97 ms</span>
+                <span class="method-start">30 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
-                <span class="method-start">194 ms</span>
+                <span class="method-start">55 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">createdata</span>
-                <span class="method-start">29329 ms</span>
+                <span class="method-name">createmember</span>
+                <span class="method-start">20080 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=createdata status=SUCCESS method=ALC_258.createdata()[pri:0, instance:smoke_suite.A...)</span>
-                <span class="method-start">76120 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">checkalchemy</span>
-                <span class="method-start">76178 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=checkalchemy status=SUCCESS method=ALC_258.checkalchemy()[pri:1, instance:smoke_sui...)</span>
-                <span class="method-start">105920 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">dotransactions</span>
-                <span class="method-start">105933 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=dotransactions status=SUCCESS method=ALC_258.dotransactions()[pri:2, instance:smoke...)</span>
-                <span class="method-start">506041 ms</span>
+                <span class="method-name">mark_test_status</span>
+                <span class="method-start">27824 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">selltoprocessor</span>
-                <span class="method-start">506047 ms</span>
+                <span class="method-name">changepassword</span>
+                <span class="method-start">29080 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">afterMethod([TestResult name=selltoprocessor status=FAILURE method=ALC_258.selltoprocessor()[pri:3, instance:smo...)</span>
-                <span class="method-start">536173 ms</span>
+                <span class="method-name">mark_test_status</span>
+                <span class="method-start">30285 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">verifytransactions</span>
-                <span class="method-start">536890 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginWithNewPassword</span>
+                <span class="method-start">31528 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">536902 ms</span>
+                <span class="method-name">mark_test_status</span>
+                <span class="method-start">32900 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">teardownalchemy</span>
-                <span class="method-start">536908 ms</span>
-              </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">teardownapp</span>
-                <span class="method-start">536911 ms</span>
+                <span class="method-start">34151 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

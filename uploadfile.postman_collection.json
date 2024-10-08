@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "517e0e35-1003-4d9c-83b6-fa14c03adebd",
+		"name": "uploadfile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32922104"
+	},
+	"item": [
+		{
+			"name": "https://api.lambdatest.com/automation/api/v1/user-files",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YXNoaXNoLnJhd2F0ZmxlZWtpdHNvbHV0aW9uczpNV0FhNmdvOEZ5bk1GWnQ1R1laeWVLdFN5Y2ZjNkkyWUtRaEZuMVBIMmgxVHc2U3lvMg=="
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"contentType": "application/pdf",
+							"type": "file",
+							"src": "/C:/Users/Fleek/Downloads/PlasticBank/com.plasticbank_new.qa/Test PDF file.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.lambdatest.com/automation/api/v1/user-files",
+					"protocol": "https",
+					"host": [
+						"api",
+						"lambdatest",
+						"com"
+					],
+					"path": [
+						"automation",
+						"api",
+						"v1",
+						"user-files"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"https://api.lambdatest.com/automation/api/v1/user-files\" -H \"accept: application/json\" -H \"Authorization: Basic YXNoaXNoLnJhd2F0ZmxlZWtpdHNvbHV0aW9uczpNV0FhNmdvOEZ5bk1GWnQ1R1laeWVLdFN5Y2ZjNkkyWUtRaEZuMVBIMmgxVHc2U3lvMg==\" -H \"Content-Type: multipart/form-data\" -F \"files=@Automation Story - Software Remote Teams - Confluence - SRT-Automation Story-090924-111951.pdf;type=application/pdf\""
+			},
+			"response": []
+		}
+	]
+}

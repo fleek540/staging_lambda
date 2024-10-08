@@ -248,7 +248,7 @@ public class Data extends BaseClass{
 	    } catch (IOException | InterruptedException e) {
 	        e.printStackTrace();
 	    }
-	    
+	    values.clear();
 	    String jsonFilePath = ".\\variable.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -887,7 +887,7 @@ public class Data extends BaseClass{
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
-
+		values.clear();
 		String jsonFilePath = ".\\variable4356.json"; // Replace with the actual path
 		ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1040,6 +1040,7 @@ public class Data extends BaseClass{
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
+		values4358.clear();
 
 		String jsonFilePath = ".\\variable4358.json"; // Replace with the actual path
 		ObjectMapper objectMapper = new ObjectMapper();
@@ -1100,7 +1101,7 @@ public class Data extends BaseClass{
 	    } catch (IOException | InterruptedException e) {
 	        e.printStackTrace();
 	    }
-	    
+	    values4957.clear();
 	    String jsonFilePath = ".\\variable4957.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1161,7 +1162,7 @@ public class Data extends BaseClass{
 	    } catch (IOException | InterruptedException e) {
 	        e.printStackTrace();
 	    }
-	    
+	   values2.clear();
 	    String jsonFilePath = ".\\variable_ALC_4362.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1230,7 +1231,7 @@ public class Data extends BaseClass{
 	    } catch (IOException | InterruptedException e) {
 	        e.printStackTrace();
 	    }
-	    
+	   values1.clear();
 	    String jsonFilePath = ".\\variable_ALC_4363.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1477,7 +1478,7 @@ public class Data extends BaseClass{
 	    } catch (IOException | InterruptedException e) {
 	        e.printStackTrace();
 	    }
-	    
+	    values_ALC_4360.clear();
 	    String jsonFilePath = ".\\variablenobonuspaid.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1549,7 +1550,7 @@ public class Data extends BaseClass{
 	    } catch (IOException | InterruptedException e) {
 	        e.printStackTrace();
 	    }
-	    
+	    values4352.clear();
 	    String jsonFilePath = ".\\variable_4352.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1608,6 +1609,8 @@ public class Data extends BaseClass{
 	        e.printStackTrace();
 	    }
 	    
+	    values4864.clear();
+	    
 	    String jsonFilePath = ".\\variable_4864.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1665,7 +1668,7 @@ public class Data extends BaseClass{
 	    } catch (IOException | InterruptedException e) {
 	        e.printStackTrace();
 	    }
-	    
+	    valuesMB.clear();
 	    String jsonFilePath = ".\\variableMB.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1724,7 +1727,7 @@ public class Data extends BaseClass{
 	    } catch (IOException | InterruptedException e) {
 	        e.printStackTrace();
 	    }
-	    
+	    valuesBranch.clear();
 	    String jsonFilePath = ".\\variableBranch.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1841,7 +1844,7 @@ public class Data extends BaseClass{
 	    } catch (IOException | InterruptedException e) {
 	        e.printStackTrace();
 	    }
-	    
+	    valuesprocessor.clear();
 	    String jsonFilePath = ".\\variableprocessor.json"; // Replace with the actual path
 	    ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1900,7 +1903,7 @@ public class Data extends BaseClass{
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
-
+		values4359.clear();
 		String jsonFilePath = ".\\variable4359.json"; // Replace with the actual path
 		ObjectMapper objectMapper = new ObjectMapper();
 
@@ -1960,7 +1963,7 @@ public class Data extends BaseClass{
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
-
+		values4359.clear();
 		String jsonFilePath = ".\\variable4359.json"; // Replace with the actual path
 		ObjectMapper objectMapper = new ObjectMapper();
 

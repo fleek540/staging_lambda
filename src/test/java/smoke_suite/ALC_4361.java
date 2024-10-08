@@ -25,12 +25,13 @@ public class ALC_4361 extends BaseClass{
 public void createdata() throws IOException {
 	Data dt = new Data();
 		dt.runNewmanFor_ALC_4361();
+		teststatus=true;
 	}
 	
 	@Test(priority=2, description="Perform transactions between member, branch and processor")
 	@Description("Perform transactions between member, branch and processor")
 	public void doTransactions() throws InterruptedException {
-		try {
+		
 		PB_LoginPage pblogin = new PB_LoginPage(pbDriver);
 		pblogin.login(Data.values_ALC_4361.get(2).replace("+63", ""), password,"+63");
 		PB_Transaction pbt = new PB_Transaction(pbDriver);
@@ -39,29 +40,16 @@ public void createdata() throws IOException {
 		pblogin1.login(Data.values_ALC_4361.get(4).replace("+63", ""), password,"+63");
 		PB_Transaction pbt1 = new PB_Transaction(pbDriver);
 		pbt1.branchToProcessorDonation(Data.values_ALC_4361.get(2));
-		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
-	        
-		}catch(Exception e) {
-			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
-	        
-		}
+		teststatus=true;
 }
 	@Test(priority=3, description="Verify that no bonus is received for donation")
 	@Description("Verify that  no bonus is received for donation")
 	public void verifyNoBonusForDonations() throws InterruptedException {
-		try {
+		
 		AlchemyLoginPage loginAlchmey=new AlchemyLoginPage(alcDriver);
 		loginAlchmey.alc_adminlogin("+17783844311","778778");
 		Branches b= new Branches(alcDriver);
 		b.checknobonus(Data.values_ALC_4361.get(2));
-((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
-		
-		}catch(Exception e) {
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
-		}
-		
-		try {
-		
 		PB_LoginPage pblogin = new PB_LoginPage(pbDriver);
 		pblogin.login(Data.values_ALC_4361.get(2).replace("+63", ""), password,"+63");
 		PB_Transaction pbt = new PB_Transaction(pbDriver);
@@ -70,12 +58,7 @@ public void createdata() throws IOException {
 		pblogi.login(Data.values_ALC_4361.get(1).replace("+63", ""), password,"+63");
 		PB_Transaction pb = new PB_Transaction(pbDriver);
 		pb.verifyNoBonusForDonationmem();
-		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
-	        
-		}catch(Exception e) {
-			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
-	        
-		}
+		teststatus=true;
 	}
 	
 	

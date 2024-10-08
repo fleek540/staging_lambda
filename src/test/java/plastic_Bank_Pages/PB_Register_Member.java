@@ -33,9 +33,9 @@ public PB_Register_Member(AndroidDriver pBriver) {
 //elements:-
 @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Code sent!\")")
 public WebElement codesent;
-@AndroidFindBy(xpath= "//android.widget.ImageButton[@content-desc=\"Done\"]")
+@AndroidFindBy(xpath= "//android.widget.Button[@content-desc=\"OK\"]/android.view.ViewGroup/android.widget.TextView")
 public WebElement photoDone;
-@AndroidFindBy(xpath= "//android.widget.ImageButton[@content-desc=\"Take photo\"]")
+@AndroidFindBy(xpath= "//android.view.ViewGroup[@content-desc=\"Take picture\"]")
 public WebElement shutter;
 @AndroidFindBy(uiAutomator= "new UiSelector().className(\"android.widget.EditText\").instance(0)")
 public WebElement loginPagePhoneNumberTextField;
@@ -478,26 +478,26 @@ public String getTypedNumber() {
 public void signUpCollector() throws InterruptedException {
 	clickSignUpButton();
 	chooseCollectorPannel();
-	tap(679,620);
+	tap(687,600);
 	Thread.sleep(2000);
-	tap(550,2120);
+	tap(550,2010);
 	shutter.click();
 	photoDone.click();
-	tap(550,2154);
+	tap(550,2054);
 	edittexts.get(1).sendKeys("Mainak "+RandomStringUtils.randomAlphabetic(5));
-	tap(200,1180);
+	tap(200,1208);
 	Thread.sleep(2000);
 	searchcountries.sendKeys("+63");
 	Thread.sleep(1500);
 	tap(400,470);
-	Thread.sleep(2000);
+	Thread.sleep(4000);
 	edittexts.get(3).click();
 	typedNumber = getTypedNumber();
     System.out.println("Typed number: " + typedNumber);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
 	edittexts.get(4).click();
 	
-	scroll(780,990,780,1352);
+	scroll(820,905,820,1285);
 	Thread.sleep(4000);
 	done.click();
 	gender.click();
@@ -511,7 +511,7 @@ public void signUpCollector() throws InterruptedException {
 	WebDriverWait wait = new WebDriverWait(pbDriver,Duration.ofSeconds(300));
 	wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(codesent)));
 	codesent.isDisplayed();
-	tap(151,1190);
+	tap(151,1050);
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 	pbDriver.pressKey(new KeyEvent(AndroidKey.DIGIT_8));

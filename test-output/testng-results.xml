@@ -1,133 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="1" skipped="1">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-27T19:19:51 IST" name="Default suite" finished-at="2024-08-27T19:28:48 IST" duration-ms="536801">
+  <suite started-at="2024-10-08T17:48:41 IST" name="Default suite" finished-at="2024-10-08T17:49:15 IST" duration-ms="34177">
     <groups>
     </groups>
-    <test started-at="2024-08-27T19:19:51 IST" name="Default test" finished-at="2024-08-27T19:28:48 IST" duration-ms="536801">
-      <class name="smoke_suite.ALC_258">
-        <test-method is-config="true" signature="generateAndroidBenefitname()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateAndroidBenefitname" finished-at="2024-08-27T19:19:51 IST" duration-ms="60" status="PASS">
+    <test started-at="2024-10-08T17:48:41 IST" name="Default test" finished-at="2024-10-08T17:49:15 IST" duration-ms="34177">
+      <class name="smoke_suite.ALC_4956">
+        <test-method is-config="true" signature="generateAndroidBenefitname()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateAndroidBenefitname" finished-at="2024-10-08T17:48:41 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateAndroidBenefitname -->
-        <test-method is-config="true" signature="generateBenefitName()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateBenefitName" finished-at="2024-08-27T19:19:51 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="generateBenefitName()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateBenefitName" finished-at="2024-10-08T17:48:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateBenefitName -->
-        <test-method is-config="true" signature="generateBenefitOrderName()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateBenefitOrderName" finished-at="2024-08-27T19:19:51 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="generateBenefitOrderName()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateBenefitOrderName" finished-at="2024-10-08T17:48:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateBenefitOrderName -->
-        <test-method is-config="true" signature="generateBonusName()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateBonusName" finished-at="2024-08-27T19:19:51 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="generateBonusName()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateBonusName" finished-at="2024-10-08T17:48:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateBonusName -->
-        <test-method is-config="true" signature="generateBranchMemberName()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateBranchMemberName" finished-at="2024-08-27T19:19:51 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="generateBranchMemberName()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateBranchMemberName" finished-at="2024-10-08T17:48:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateBranchMemberName -->
-        <test-method is-config="true" signature="generateBranchName()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateBranchName" finished-at="2024-08-27T19:19:51 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="generateBranchName()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateBranchName" finished-at="2024-10-08T17:48:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateBranchName -->
-        <test-method is-config="true" signature="generateBrandName()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateBrandName" finished-at="2024-08-27T19:19:51 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateBrandName -->
-        <test-method is-config="true" signature="generateRandomBranchMemberNumber()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateRandomBranchMemberNumber" finished-at="2024-08-27T19:19:51 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="generateRandomBranchMemberNumber()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateRandomBranchMemberNumber" finished-at="2024-10-08T17:48:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateRandomBranchMemberNumber -->
-        <test-method is-config="true" signature="generateRandomLastName()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateRandomLastName" finished-at="2024-08-27T19:19:51 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="generateBrandName()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateBrandName" finished-at="2024-10-08T17:48:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateBrandName -->
+        <test-method is-config="true" signature="generateRandomLastName()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateRandomLastName" finished-at="2024-10-08T17:48:41 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateRandomLastName -->
-        <test-method is-config="true" signature="generateRandomNumber()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="generateRandomNumber" finished-at="2024-08-27T19:19:51 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="generateRandomNumber()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="generateRandomNumber" finished-at="2024-10-08T17:48:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateRandomNumber -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:19:51 IST" name="setup" finished-at="2024-08-27T19:20:20 IST" duration-ms="29117" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:48:41 IST" name="setup" finished-at="2024-10-08T17:49:01 IST" duration-ms="20005" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createdata()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:20:20 IST" name="createdata" description="Create a member, branch, processor and a bonus with the same branch and processor" finished-at="2024-08-27T19:21:07 IST" duration-ms="46506" status="PASS">
+        <test-method signature="createmember()[pri:1, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:49:01 IST" name="createmember" description="Create a valid member." finished-at="2024-10-08T17:49:09 IST" duration-ms="7697" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createdata -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:21:07 IST" name="afterMethod" finished-at="2024-08-27T19:21:07 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=createdata status=SUCCESS method=ALC_258.createdata()[pri:0, instance:smoke_suite.ALC_258@50313382] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- createmember -->
+        <test-method is-config="true" signature="mark_test_status()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:49:09 IST" name="mark_test_status" finished-at="2024-10-08T17:49:10 IST" duration-ms="1237" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="checkalchemy()[pri:1, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:21:07 IST" name="checkalchemy" description="Go the branch and take note of branch details:- 1) KG recycled, 2) Active members, 3) Members Registered and 4) Tokens in wallet." finished-at="2024-08-27T19:21:37 IST" duration-ms="29735" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkalchemy -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:21:37 IST" name="afterMethod" finished-at="2024-08-27T19:21:37 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkalchemy status=SUCCESS method=ALC_258.checkalchemy()[pri:1, instance:smoke_suite.ALC_258@50313382] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="dotransactions()[pri:2, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:21:37 IST" name="dotransactions" description="Login into branch and buy materials from member" finished-at="2024-08-27T19:28:17 IST" duration-ms="400103" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dotransactions -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:28:17 IST" name="afterMethod" finished-at="2024-08-27T19:28:17 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=dotransactions status=SUCCESS method=ALC_258.dotransactions()[pri:2, instance:smoke_suite.ALC_258@50313382] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="selltoprocessor()[pri:3, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:28:17 IST" name="selltoprocessor" description="Sell material 1 to processor with receipt and material 2 to processor without receipt." finished-at="2024-08-27T19:28:47 IST" duration-ms="30112" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+        </test-method> <!-- mark_test_status -->
+        <test-method signature="changepassword()[pri:2, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:49:10 IST" name="changepassword" description="Login with newly created member and change password in settings." finished-at="2024-10-08T17:49:11 IST" duration-ms="1200" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, executeScript {script=lambda-hook: {"action": "setTestStatus","arguments": {"status":"failed", "remark":"This is a failed test "}} , args=[]}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f]]>
+              <![CDATA[Input must be set]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, executeScript {script=lambda-hook: {"action": "setTestStatus","arguments": {"status":"failed", "remark":"This is a failed test "}} , args=[]}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
-at smoke_suite.ALC_258.selltoprocessor(ALC_258.java:67)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+              <![CDATA[java.lang.IllegalArgumentException: Input must be set
+at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
+at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:74)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:43)
+at plastic_Bank_Pages.PB_LoginPage.clickFinalLogin(PB_LoginPage.java:119)
+at plastic_Bank_Pages.PB_LoginPage.login(PB_LoginPage.java:199)
+at smoke_suite.ALC_4956.changepassword(ALC_4956.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
@@ -154,59 +103,34 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selltoprocessor -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:28:47 IST" name="afterMethod" finished-at="2024-08-27T19:28:48 IST" duration-ms="696" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=selltoprocessor status=FAILURE method=ALC_258.selltoprocessor()[pri:3, instance:smoke_suite.ALC_258@50313382] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+        </test-method> <!-- changepassword -->
+        <test-method is-config="true" signature="mark_test_status()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:49:11 IST" name="mark_test_status" finished-at="2024-10-08T17:49:13 IST" duration-ms="1239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mark_test_status -->
+        <test-method signature="loginWithNewPassword()[pri:2, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:49:13 IST" name="loginWithNewPassword" description="Login with new password" finished-at="2024-10-08T17:49:14 IST" duration-ms="1366" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, screenshot {}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f]]>
+              <![CDATA[Input must be set]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, screenshot {}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
-at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
-at Utilities.BaseClass.afterMethod(BaseClass.java:435)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+              <![CDATA[java.lang.IllegalArgumentException: Input must be set
+at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
+at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:74)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:43)
+at plastic_Bank_Pages.PB_LoginPage.clickFinalLogin(PB_LoginPage.java:119)
+at plastic_Bank_Pages.PB_LoginPage.login(PB_LoginPage.java:199)
+at smoke_suite.ALC_4956.loginWithNewPassword(ALC_4956.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
@@ -231,93 +155,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifytransactions()[pri:4, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:28:48 IST" name="verifytransactions" description="Go to branch and processor one by one to check transaction details." finished-at="2024-08-27T19:28:48 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, screenshot {}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Unable to find the session info for particular sessionId db905910-ac0f-44e0-88e9-423a1bee081f, maybe session has quit already or timed out.
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [db905910-ac0f-44e0-88e9-423a1bee081f, screenshot {}]
-Capabilities {appium:adbExecTimeout: 120000, appium:appActivity: org.plasticbank.app.MainAct..., appium:appPackage: org.plasticbank.app, appium:autoAcceptAlerts: true, appium:automationName: uiautomator2, appium:chromeOptions: {args: []}, appium:chromedriverExecutableDir: /appium/assets/drivers/chro..., appium:chromedriverPorts: [[11001, 11049]], appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 120000, appActivity: org.plasticbank.app.MainAct..., appPackage: org.plasticbank.app, autoAcceptAlerts: true, automationName: uiautomator2, chromeOptions: {args: []}, chromedriverExecutableDir: /appium/assets/drivers/chro..., chromedriverPorts: [[11001, 11049]], deviceName: Pixel 8, headless: false, mode: cloud, nativeWebScreenshot: true, newCommandTimeout: 0, orientation: PORTRAIT, platformName: android, platformVersion: 14, skipLogcatCapture: true, systemPort: 12108, udid: 38221FDJH003E8, uiautomator2ServerLaunchTimeout: 60000, waitForQuiescence: false}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: Pixel 8, appium:deviceName: 38221FDJH003E8, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 38221FDJH003E8, appium:headless: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:mode: cloud, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:orientation: PORTRAIT, appium:pixelRatio: 2.625, appium:platformVersion: 14, appium:skipLogcatCapture: true, appium:statBarHeight: 132, appium:systemPort: 12108, appium:takesScreenshot: true, appium:udid: 38221FDJH003E8, appium:uiautomator2ServerLaunchTimeout: 60000, appium:viewportRect: {height: 2010, left: 0, top: 132, width: 1080}, appium:waitForQuiescence: false, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: db905910-ac0f-44e0-88e9-423a1bee081f
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
-at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
-at Utilities.BaseClass.afterMethod(BaseClass.java:435)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        </test-method> <!-- loginWithNewPassword -->
+        <test-method is-config="true" signature="mark_test_status()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:49:14 IST" name="mark_test_status" finished-at="2024-10-08T17:49:15 IST" duration-ms="1247" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifytransactions -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:28:48 IST" name="afterMethod" finished-at="2024-08-27T19:28:48 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="teardownalchemy()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:28:48 IST" name="teardownalchemy" finished-at="2024-08-27T19:28:48 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardownalchemy -->
-        <test-method is-config="true" signature="teardownapp()[pri:0, instance:smoke_suite.ALC_258@50313382]" started-at="2024-08-27T19:28:48 IST" name="teardownapp" finished-at="2024-08-27T19:28:48 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- mark_test_status -->
+        <test-method is-config="true" signature="teardownapp()[pri:0, instance:smoke_suite.ALC_4956@11d8ae8b]" started-at="2024-10-08T17:49:15 IST" name="teardownapp" finished-at="2024-10-08T17:49:15 IST" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownapp -->
-      </class> <!-- smoke_suite.ALC_258 -->
+      </class> <!-- smoke_suite.ALC_4956 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

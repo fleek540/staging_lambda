@@ -1,0 +1,229 @@
+{
+  "id": "951a484e-3e72-4644-9bf8-187db08f9029",
+  "values": [
+    {
+      "type": "any",
+      "value": "Fleekpc4Llo",
+      "key": "m1randomUsername"
+    },
+    {
+      "type": "any",
+      "value": "+633217539196",
+      "key": "m1randomNumber"
+    },
+    {
+      "type": "any",
+      "value": "CF4CBF0F-3CAB-C6D6-FCD4-58FD463A176E",
+      "key": "m1deviceID"
+    },
+    {
+      "type": "any",
+      "value": "4f5df06b-e653-40e7-a824-52d62d5fa09c",
+      "key": "m1id"
+    },
+    {
+      "type": "any",
+      "value": "4f5df06b-e653-40e7-a824-52d62d5fa09c",
+      "key": "m1entityId"
+    },
+    {
+      "type": "any",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk4NzEyMzAsInN1YiI6IjRmNWRmMDZiLWU2NTMtNDBlNy1hODI0LTUyZDYyZDVmYTA5YyJ9.W8xe5LTuLnB7K3T1JCEcFGWgvOyjpPjeYBGVgoah4VeEYD68c4IblF-8LOWJQjLc_7a4WJvxCbuPnkE8BP6DMQ",
+      "key": "m1accessToken"
+    },
+    {
+      "type": "any",
+      "value": "Fleeksa8KNv",
+      "key": "b1randomUsername"
+    },
+    {
+      "type": "any",
+      "value": "+631643847421",
+      "key": "b1randomNumber"
+    },
+    {
+      "type": "any",
+      "value": "8DC615C5-DFC7-9F04-4DFB-7276DB9AB6FA",
+      "key": "b1deviceID"
+    },
+    {
+      "type": "any",
+      "value": "74287def-1867-4396-8046-148a51eae477",
+      "key": "b1id"
+    },
+    {
+      "type": "any",
+      "value": "74287def-1867-4396-8046-148a51eae477",
+      "key": "b1entityId"
+    },
+    {
+      "type": "any",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk4NzEyMzQsInN1YiI6Ijc0Mjg3ZGVmLTE4NjctNDM5Ni04MDQ2LTE0OGE1MWVhZTQ3NyJ9.xb1uHyxJlkjXa1Q4gX0YxGezEzpWpM_fCzBgv-jgAtSxEO46Im-yOj6jBmCXzKZeD_Lo8bCChARKvzkYFtrU6w",
+      "key": "b1accessToken"
+    },
+    {
+      "type": "any",
+      "value": "brancha_HF5H4X7h",
+      "key": "b1randomBranchName"
+    },
+    {
+      "type": "any",
+      "value": "57cc8c2b-5703-41db-bfa2-6138f533ceee",
+      "key": "b1branchid"
+    },
+    {
+      "type": "any",
+      "value": "579b22e5-5079-4502-84b0-5a003fc0844e",
+      "key": "b1item1Id"
+    },
+    {
+      "type": "any",
+      "value": "95644436-83f4-44d3-88d7-6b646b529288",
+      "key": "b1item2Id"
+    },
+    {
+      "type": "any",
+      "value": "Fleek3Xo6d5",
+      "key": "b2randomUsername"
+    },
+    {
+      "type": "any",
+      "value": "+630354448158",
+      "key": "b2randomNumber"
+    },
+    {
+      "type": "any",
+      "value": "A751FA40-E118-778C-EA59-70E9272F6041",
+      "key": "b2deviceID"
+    },
+    {
+      "type": "any",
+      "value": "67a279a2-904b-4eaa-8c55-c98b59ee2e26",
+      "key": "b2id"
+    },
+    {
+      "type": "any",
+      "value": "67a279a2-904b-4eaa-8c55-c98b59ee2e26",
+      "key": "b2entityId"
+    },
+    {
+      "type": "any",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk4NzEyODksInN1YiI6IjY3YTI3OWEyLTkwNGItNGVhYS04YzU1LWM5OGI1OWVlMmUyNiJ9.sXZtIuzs6srIp4vpSDZLbkEwX4Nqab57YOvru2gAiEOATDQzpZ8mVN5H22VWeaXsvv2bpM8HjOeTnpnxmiVoxg",
+      "key": "b2accessToken"
+    },
+    {
+      "type": "any",
+      "value": "branchb_nbK4OwSv",
+      "key": "b2randomBranchName"
+    },
+    {
+      "type": "any",
+      "value": "50e9755b-239f-4595-8f71-0474c66bce6a",
+      "key": "b2branchid"
+    },
+    {
+      "type": "any",
+      "value": "d226ceb5-48dd-4096-8bd4-84b829ade105",
+      "key": "b2item1Id"
+    },
+    {
+      "type": "any",
+      "value": "a15b0846-4836-451a-9458-04c3c07e0f65",
+      "key": "b2item2Id"
+    },
+    {
+      "type": "any",
+      "value": "Fleek9ckcBh",
+      "key": "p1randomUsername"
+    },
+    {
+      "type": "any",
+      "value": "+632045696026",
+      "key": "p1randomNumber"
+    },
+    {
+      "type": "any",
+      "value": "953044A5-66E6-D290-4B30-C14006A0C246",
+      "key": "p1deviceID"
+    },
+    {
+      "type": "any",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk4NzEzMTksInN1YiI6IjFhYjk2ZmFmLTQyZWQtNDBmYS1hNTc0LTBlYjBlMTdmMGFjMCJ9.WeyCZFdHVEB40XUteeTetyZoi3eg4sL0UvZ5x8cVENB7slgV_2AzXAEPcm4SRMrFKPhh-ac6Vyvb4iTTiT0bfQ",
+      "key": "p1accessToken"
+    },
+    {
+      "type": "any",
+      "value": "1ab96faf-42ed-40fa-a574-0eb0e17f0ac0",
+      "key": "p1userId"
+    },
+    {
+      "type": "any",
+      "value": "process_JnpGyeYc",
+      "key": "p1randomProcessorName"
+    },
+    {
+      "type": "any",
+      "value": "55f34bae-3dab-4ffb-beba-04fcb71dd3fc",
+      "key": "p1processorid"
+    },
+    {
+      "type": "any",
+      "value": "881340a3-8eef-46e0-b100-686502a429ca",
+      "key": "p1item1Id"
+    },
+    {
+      "type": "any",
+      "value": "a009024c-3e17-4eeb-b88d-1e23743abece",
+      "key": "p1item2Id"
+    },
+    {
+      "type": "any",
+      "value": "ffd1d55b3ce4cb5eb6e5902dcaea807f",
+      "key": "sessionCode"
+    },
+    {
+      "type": "any",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjgzNzMxNTksInN1YiI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMSJ9.bmIUG_maJX_XvwC3TnaMcUjomf2cP0IphEwKz7qIGF2ZWgWFlEpUQ-lkFmjdifYvHCFcK8QhUzwV8mgKwzyRbQ",
+      "key": "alchemytoken"
+    },
+    {
+      "type": "any",
+      "value": "v-4kx7KnvF7cOnBZxgllnPM8llw=",
+      "key": "bonusordersessionCode"
+    },
+    {
+      "type": "any",
+      "value": "2024-10-08T07:11:26.829Z",
+      "key": "formattedDateTime"
+    },
+    {
+      "type": "any",
+      "value": "FleekGkJCve",
+      "key": "bonusOrderName"
+    },
+    {
+      "type": "any",
+      "value": "90b045ba-406a-4204-a1b0-cb6229940488",
+      "key": "bonusOrderId"
+    },
+    {
+      "type": "any",
+      "value": "570Sf2KZG7PmfZxq7fP7H66mU7I=",
+      "key": "addprosessionCode"
+    },
+    {
+      "type": "any",
+      "value": "f3b1f82e-5f22-4b0e-8800-33d3b8d67262",
+      "key": "t2Id"
+    },
+    {
+      "type": "any",
+      "value": "a5e707f9-260f-4228-8c1e-54b62097d7a5",
+      "key": "t4Id"
+    }
+  ],
+  "name": "environment",
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2024-10-08T07:11:35.236Z",
+  "_postman_exported_using": "Newman/5.3.2"
+}

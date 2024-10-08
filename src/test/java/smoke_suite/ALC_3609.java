@@ -42,49 +42,35 @@ public class ALC_3609 extends BaseClass {
 	@Description("Ensure that GCash is turned on in country settings for Philippines and a valid "
 			+ "Philippines account linked to gcash having tokens in wallet exists.")
 	public void preconditions() throws InterruptedException {
-		try{
+		
 		AlchemyLoginPage loginAlchmey=new AlchemyLoginPage(alcDriver);
 		loginAlchmey.alc_adminlogin("+17783844311","778778");
 		Country_Settings cs = new Country_Settings(alcDriver);
 		cs.ensureDigitalCashOutToggleIsOn("philippines");
 		Branches m= new Branches(alcDriver);
 		m.ensureBranchIsPresentWithTokens("+639665849021", "fleek gcash account", "9665849021", Branches.philippinesbr, "602");
-		((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
-		
-		}catch(Exception e) {
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
-		}	
+		teststatus=true;	
 	}
 	@Test(priority=1, description="Login with existing account and perform GCash Transaction.")
 	@Description("Login with existing account and perform GCash Transaction.")
 	public void gojekTransaction() throws IOException, InterruptedException {
-		try{
+		
 		PB_LoginPage pl = new PB_LoginPage(pbDriver);
 		pl.login("9665849021","123456a", "+63");
 		PB_Member_Profile pmp = new PB_Member_Profile(pbDriver);
 		Thread.sleep(5000);
 		pmp.hometab.click();
-		((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
-	        
-		}catch(Exception e) {
-			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
-	        
-		}	
+		teststatus=true;	
 	}
 	
 	
 	@Test(priority=2, description="Based on the tokens cashed out, Verify Tokens are deducted from Branch's wallet in APP")
 	@Description("Based on the tokens cashed out, Verify Tokens are deducted from Branch's wallet in APPs")
 	public void verifyTokensInApp() throws IOException, InterruptedException {
-		try{
+		
 		PB_Member_Profile pmp = new PB_Member_Profile(pbDriver);
 		pmp.performDigitalCashOutBranch();
-		((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
-	        
-		}catch(Exception e) {
-			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
-	        
-		}
+		teststatus=true;
 	}
 	
 	
@@ -92,15 +78,11 @@ public class ALC_3609 extends BaseClass {
 	@Test(priority=3,description="Based on the tokens cashed out, Verify Tokens are deducted from Branch's wallet in ALCHEMY")
 	@Description("Based on the tokens cashed out, Verify Tokens are deducted from Branch's wallet in ALCHEMY")
 	public void verifyTokensInAlchemy() throws InterruptedException {
-		try{
+		
 		Reports r = new Reports(alcDriver);
 		r.transactionStatusInAlchemyReportsforgcash();
 		Branches m= new Branches(alcDriver);
 		m.compareAlchemyAndAppTokens("+639665849021");
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "passed");
-		
-		}catch(Exception e) {
-			((JavascriptExecutor) alcDriver).executeScript("lambda-status=" + "failed");
-		}
+		teststatus=true;
 	}
 }

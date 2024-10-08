@@ -342,11 +342,11 @@
 	"variable": [
 		{
 			"key": "BaseUrl",
-			"value": "https://qapb.cognitionfoundry.io"
+			"value": "https://stagingpb.cognitionfoundry.io"
 		},
 		{
 			"key": "HostName",
-			"value": "qapb.cognitionfoundry.io"
+			"value": "stagingpb.cognitionfoundry.io"
 		}
 	]
 }

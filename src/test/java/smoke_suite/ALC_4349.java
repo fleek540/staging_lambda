@@ -10,17 +10,19 @@ import org.openqa.selenium.JavascriptExecutor;
 
 
 import Utilities.BaseClass;
+import Utilities.BaseClass2;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.qameta.allure.Description;
 import plastic_Bank_Pages.PB_Register_Member;
+import plastic_Bank_Pages.PB_Register_Member2;
 
-public class ALC_4349 extends BaseClass{
+public class ALC_4349 extends BaseClass2{
 	@Test(priority=0,description="Password criteria displayed if not met by user.")
 	@Description("Password criteria displayed if not met by user.")
 	public void verifypasswordcriteria() throws InterruptedException {
-		try{
-		PB_Register_Member pbsignup= new PB_Register_Member(pbDriver);
+	
+		PB_Register_Member2 pbsignup= new PB_Register_Member2(pbDriver);
 		pbsignup.clickSignUpButton();
 		pbsignup.chooseCollectorPannel();
 		scroll(500,2000,500,1500);
@@ -31,15 +33,10 @@ public class ALC_4349 extends BaseClass{
 		pbDriver.pressKey(new KeyEvent(AndroidKey.F));
 		
 		pbDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-		tap(500,1782);
+		tap(500,1682);
 		pbsignup.pwdcriteria.isDisplayed();
 		Thread.sleep(1000);
-		 ((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"passed\", \"remark\":\"This is a passed test \"}} ");
-	        
-		}catch(Exception e) {
-			((JavascriptExecutor) pbDriver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a failed test \"}} ");
-	        
-		}
+		teststatus=true;
 		
 	}
 
