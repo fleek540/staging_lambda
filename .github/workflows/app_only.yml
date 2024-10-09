@@ -1,4 +1,4 @@
-name: QA Env Run app only test cases alc_4348 alc_4349 alc_4956
+name: STG Env Run app only test cases alc_4348 alc_4349 alc_4956
 
 on:
   workflow_dispatch:
@@ -63,6 +63,6 @@ jobs:
             'Content-Type' = 'application/json'
           }
           $body = @{
-            text = "QA Env Mobile App (PB_QA_20082024(R05)) only Test Cases Automated Execution Completed. Open this link to check the report: $env:SHAREABLE_URL"
+            text = "STG Env Mobile App (PB_QA_20082024(R05)) only Test Cases Automated Execution Completed. Open this link to check the report: $env:SHAREABLE_URL"
           } | ConvertTo-Json
           Invoke-RestMethod -Uri $env:SLACK_WEBHOOK -Method Post -Headers $headers -Body $body
