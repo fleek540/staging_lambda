@@ -85,6 +85,6 @@ jobs:
           'Content-Type' = 'application/json'
         }
         $body = @{
-          text = "STG Env Alchemy only Test Cases Automated Execution Completed. Open this link to check the report: $env:SHAREABLE_URL"
+          text = "STG Env Alchemy only Test Cases Automated Execution as on 11th Oct 2024. Open this link to check the report: $env:SHAREABLE_URL"
         } | ConvertTo-Json
         Invoke-RestMethod -Uri $env:SLACK_WEBHOOK -Method Post -Headers $headers -Body $body
