@@ -212,7 +212,7 @@ public static boolean gojekyn;
 		  ltOptions.put("locationServicesEnabled", false);
 		  ltOptions.put("locationServicesAuthorized", false);
 		  ltOptions.put("isRealMobile", true);
-		  ltOptions.put("app", "lt://APP10160361361728307289843739");
+		  ltOptions.put("app", "lt://APP10160451051728707076465386");
 		  ltOptions.put("deviceOrientation", "PORTRAIT");
 		  
 		  capabilities.setCapability("lt:options", ltOptions);
